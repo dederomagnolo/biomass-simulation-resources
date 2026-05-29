@@ -1,5 +1,10 @@
 # Biomass Simulation Resources - ROS Noetic Solution
 
+> [!IMPORTANT]
+> This branch is the solution for **ROS Noetic**.
+> If you are using **ROS 2**, go to the `master` branch:
+> https://github.com/dederomagnolo/biomass-simulation-resources/tree/master
+
 This repository centralizes 3D simulation assets used by the Biomass Group at LARIS (Laboratory of Autonomous Robots & Intelligent Systems), UFSCar.
 
 The goal is to provide reusable, research-oriented models and worlds that better represent forest environments, with special focus on the Brazilian Cerrado.
