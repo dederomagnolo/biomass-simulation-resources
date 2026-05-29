@@ -1,24 +1,21 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.0.2)
 project(biomass_simulation_resources)
 
-find_package(ament_cmake REQUIRED)
+find_package(catkin REQUIRED)
+
+catkin_package()
+
+catkin_add_env_hooks(50.${PROJECT_NAME}
+  SHELLS sh
+  DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks
+)
 
 install(DIRECTORY launch models worlds
-  DESTINATION share/${PROJECT_NAME}
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   USE_SOURCE_PERMISSIONS
 )
 
 install(PROGRAMS
-  run-world
-  DESTINATION lib/${PROJECT_NAME}
+  run-world.sh
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-
-install(FILES resource/${PROJECT_NAME}
-  DESTINATION share/ament_index/resource_index/packages
-)
-
-install(FILES package.xml
-  DESTINATION share/${PROJECT_NAME}
-)
-
-ament_package()

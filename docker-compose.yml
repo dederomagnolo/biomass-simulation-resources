@@ -1,18 +1,18 @@
 services:
-  ros2:
+  ros_noetic:
     build:
       context: .
-      dockerfile: Dockerfile.ros2
-    container_name: biomass_ros2_dev
+      dockerfile: Dockerfile
+    container_name: biomass_sim_resources_dev
     stdin_open: true
     tty: true
-    working_dir: /simulation-ws
+    working_dir: /catkin_ws
     environment:
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
       - NVIDIA_DISABLE_REQUIRE=1
     volumes:
-      - ./:/simulation-ws/src/biomass-simulation-resources
+      - ./:/catkin_ws/src/biomass-simulation-resources
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     network_mode: host
     privileged: true
