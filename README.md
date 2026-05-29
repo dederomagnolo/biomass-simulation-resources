@@ -4,6 +4,11 @@ This package aims to centralize 3D simulation assets used by the Biomass Group a
 
 The main goal is to provide reusable, research-oriented 3D models and worlds that better represent real forest environments, with special focus on the Brazilian Cerrado.
 
+> [!IMPORTANT]
+> This branch is the solution for **ROS 2**.
+> If you are using **ROS Noetic**, go to the `ros-noetic` branch:
+> https://github.com/dederomagnolo/biomass-simulation-resources/tree/ros-noetic
+
 ## Required versions
 - Ubuntu: 24.04 (Noble)
 - ROS 2: Jazzy
