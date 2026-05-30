@@ -1,7 +1,7 @@
 # Biomass Simulation Resources - ROS Noetic Solution
 
 > [!IMPORTANT]
-> This branch is the solution for **ROS Noetic**.
+> This branch is configured for **ROS Noetic**.
 > If you are using **ROS 2**, go to the `master` branch:
 > https://github.com/dederomagnolo/biomass-simulation-resources/tree/master
 
