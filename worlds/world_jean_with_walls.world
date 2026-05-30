@@ -26,8 +26,8 @@
     </light>
 
     <include>
-      <uri>model://green_ground</uri>
-      <name>green_ground</name>
+      <uri>model://world_jean_ground</uri>
+      <name>world_jean_ground</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
 
@@ -151,11 +151,103 @@
       <pose>-1.806085 -1.958286 0.000000 0 0 1.279711</pose>
     </include>
 
-<gui fullscreen='0'>
+    <model name='world_jean_boundary_walls'>
+      <static>1</static>
+      <link name='link'>
+        <!-- West wall -->
+        <collision name='wall_west_collision'>
+          <pose>-5.8 0 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 11.6 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='wall_west_visual'>
+          <pose>-5.8 0 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 11.6 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.55 0.55 0.55 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- East wall -->
+        <collision name='wall_east_collision'>
+          <pose>5.8 0 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 11.6 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='wall_east_visual'>
+          <pose>5.8 0 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.2 11.6 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.55 0.55 0.55 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- South wall -->
+        <collision name='wall_south_collision'>
+          <pose>0 -5.8 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>11.6 0.2 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='wall_south_visual'>
+          <pose>0 -5.8 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>11.6 0.2 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.55 0.55 0.55 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+          </material>
+        </visual>
+
+        <!-- North wall -->
+        <collision name='wall_north_collision'>
+          <pose>0 5.8 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>11.6 0.2 2.5</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='wall_north_visual'>
+          <pose>0 5.8 1.25 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>11.6 0.2 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.55 0.55 0.55 1</ambient>
+            <diffuse>0.65 0.65 0.65 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <gui fullscreen='0'>
       <camera name='user_camera'>
         <pose>0 -18 12 0 0.55 1.57</pose>
       </camera>
     </gui>
   </world>
 </sdf>
-
