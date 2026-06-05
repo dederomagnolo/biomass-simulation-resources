@@ -1,0 +1,4 @@
+x_min=-6
+x_max=6
+y_min=-6
+y_max=6
