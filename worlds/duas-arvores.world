@@ -1,0 +1,361 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <plugin name='mrs_gazebo_static_transform_republisher_plugin' filename='libMrsGazeboCommonResources_StaticTransformRepublisher.so'/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>47.3977</latitude_deg>
+      <longitude_deg>8.54559</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <physics name='default_physics' default='0' type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>50</iters>
+          <sor>1</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>1000</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+    <scene>
+      <shadows>0</shadows>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+    </scene>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>250 250 600 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>0 0 -1</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='world_jean_tree_clone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 1 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.22</radius>
+              <length>2</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://world_jean_tree/meshes/world_jean_tree.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.52183 3.7767 0 0 -0 0</pose>
+    </model>
+    <model name='world_jean_tree_clone_clone_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 1 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.22</radius>
+              <length>2</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://world_jean_tree/meshes/world_jean_tree.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.97222 6.81452 0 0 -0 0</pose>
+    </model>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>250 250</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='grass'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>150 250</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/Gazebo.material</uri>
+              <name>Gazebo/Grass</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+    </model>
+    <gui fullscreen='0'>
+      <camera name='camera'>
+        <pose>-4.24148 -10.9806 11.0827 0 0.518505 0.906203</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <plugin name='mrs_gazebo_rviz_cam_synchronizer' filename='libMrsGazeboCommonResources_RvizCameraSynchronizer.so'>
+      <target_frame_id>gazebo_user_camera</target_frame_id>
+      <world_origin_frame_id>uav1/gps_origin</world_origin_frame_id>
+      <frame_to_follow>uav1::base_link</frame_to_follow>
+    </plugin>
+    <gravity>0 0 -9.8066</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <wind/>
+    <model name='world_jean_tree_clone_clone_0'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <pose>0 0 1 0 -0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.22</radius>
+              <length>2</length>
+            </cylinder>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <uri>model://world_jean_tree/meshes/world_jean_tree.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.20394 4.21795 0 0 -0 0</pose>
+    </model>
+    <state world_name='default'>
+      <sim_time>578 300000000</sim_time>
+      <real_time>675 994200972</real_time>
+      <wall_time>1781803680 93112676</wall_time>
+      <iterations>144575</iterations>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='uav1'>
+        <pose>19.9947 1.53928 7.72734 -0.000592 -0.00133 3.09414</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>19.9947 1.53928 7.72734 -0.000592 -0.00133 3.09414</pose>
+          <velocity>0.002285 0.002799 0.029632 -0.00447 -0.004228 -8.8e-05</velocity>
+          <acceleration>0.012575 -0.007116 0.0038 -0.07697 0.046448 0.00085</acceleration>
+          <wrench>0.025149 -0.014233 0.0076 0 -0 0</wrench>
+        </link>
+        <link name='garmin_mount_link'>
+          <pose>19.9947 1.53928 7.72635 -0.00133 0.000592 -1.61824</pose>
+          <velocity>0.002289 0.002794 0.029632 -0.00447 -0.004228 -8.8e-05</velocity>
+          <acceleration>0.012528 -0.007193 0.0038 -0.076969 0.046448 0.000786</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='gps0_link'>
+          <pose>19.9947 1.53928 7.72734 -0.000592 -0.00133 3.09414</pose>
+          <velocity>0.002285 0.002799 0.029632 -0.00447 -0.004228 -8.8e-05</velocity>
+          <acceleration>0.012575 -0.007116 0.0038 -0.076969 0.046448 0.000786</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='ground_truth_link'>
+          <pose>19.9947 1.53928 7.72734 -0.000592 -0.00133 3.09414</pose>
+          <velocity>0.002285 0.002799 0.029632 -0.00447 -0.004228 -8.8e-05</velocity>
+          <acceleration>0.012575 -0.007116 0.0038 -0.076969 0.046448 0.000786</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='imu_link'>
+          <pose>19.9947 1.53928 7.72734 -0.000592 -0.00133 3.09414</pose>
+          <velocity>0.002285 0.002799 0.029632 -0.00447 -0.004228 -8.8e-05</velocity>
+          <acceleration>0.012575 -0.007116 0.0038 -0.076969 0.046448 0.000786</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='lidar0_link'>
+          <pose>19.9918 1.47685 7.71831 1.15085 1.56934 2.67419</pose>
+          <velocity>0.002318 0.002758 0.029899 -0.00447 -0.004228 -8.8e-05</velocity>
+          <acceleration>0.012203 -0.007813 0.008743 -0.076969 0.046448 0.000786</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+        <link name='os_sensor_link'>
+          <pose>19.9949 1.53921 7.83434 -0.000592 -0.00133 3.09414</pose>
+          <velocity>0.001833 0.003277 0.029633 -0.00447 -0.004228 -8.8e-05</velocity>
+          <acceleration>0.017545 0.001119 0.003795 -0.076969 0.046448 0.000786</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='prop_0_link'>
+          <pose>19.8224 1.72883 7.78469 -0.001443 0.000175 -1.92109</pose>
+          <velocity>0.002059 0.00307 0.028057 0.040512 -0.027354 3.03508</velocity>
+          <acceleration>0.015092 -0.002839 -0.002787 -0.138672 0.097847 0.000248</acceleration>
+          <wrench>7.5e-05 -1.4e-05 -1.4e-05 0 -0 0</wrench>
+        </link>
+        <link name='prop_1_link'>
+          <pose>20.1672 1.34965 7.784 0.001352 0.000535 0.72327</pose>
+          <velocity>0.002029 0.003037 0.031209 0.040516 -0.027356 3.03828</velocity>
+          <acceleration>0.015353 -0.002619 0.010384 -0.138733 0.097896 0.000248</acceleration>
+          <wrench>7.7e-05 -1.3e-05 5.2e-05 0 -0 0</wrench>
+        </link>
+        <link name='prop_2_link'>
+          <pose>19.8052 1.36684 7.78448 8.9e-05 -0.001455 2.61835</pose>
+          <velocity>0.002028 0.003071 0.029602 -0.049789 0.018572 -3.06072</velocity>
+          <acceleration>0.015364 -0.002868 0.025874 -0.01827 -0.008069 1.9e-05</acceleration>
+          <wrench>7.7e-05 -1.4e-05 0.000129 0 -0 0</wrench>
+        </link>
+        <link name='prop_3_link'>
+          <pose>20.1844 1.71164 7.78421 0.001449 -0.000153 1.21412</pose>
+          <velocity>0.00206 0.003036 0.029664 -0.049747 0.018551 -3.02938</velocity>
+          <acceleration>0.01508 -0.00259 -0.018277 -0.018289 -0.008048 1.9e-05</acceleration>
+          <wrench>7.5e-05 -1.3e-05 -9.1e-05 0 -0 0</wrench>
+        </link>
+        <link name='rplidar_mount_link'>
+          <pose>19.9947 1.53928 7.72734 -0.00133 0.000592 -1.61824</pose>
+          <velocity>0.002285 0.002799 0.029632 -0.00447 -0.004228 -8.8e-05</velocity>
+          <acceleration>0.012575 -0.007116 0.0038 -0.076969 0.046448 0.000786</acceleration>
+          <wrench>0 -0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='world_jean_tree_clone'>
+        <pose>4.52183 3.7767 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.52183 3.7767 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='world_jean_tree_clone_clone_0'>
+        <pose>4.20394 4.21795 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.20394 4.21795 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='world_jean_tree_clone_clone_clone_0'>
+        <pose>4.97222 6.81452 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>4.97222 6.81452 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>250 250 600 0 -0 0</pose>
+      </light>
+    </state>
+  </world>
+</sdf>
