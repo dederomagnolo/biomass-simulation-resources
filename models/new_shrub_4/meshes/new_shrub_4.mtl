@@ -1,0 +1,24 @@
+# Blender 5.1.2 MTL File: 'new_shrub_4.blend'
+# www.blender.org
+
+newmtl Leaf_Mat_X
+Ns 200.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 3
+map_Kd Leaf_SubsurfaceColor.jpg
+
+newmtl Trunk_Mat_X
+Ns 200.000000
+Ka 0.200000 0.200000 0.200000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd Trunk_.jpg
+map_Bump -bm 1.000000 Trunk__Normal.jpg
