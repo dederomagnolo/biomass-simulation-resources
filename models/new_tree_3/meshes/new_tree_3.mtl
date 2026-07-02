@@ -1,0 +1,45 @@
+# Blender 5.1.2 MTL File: 'new_tree_3.blend'
+# www.blender.org
+
+newmtl vray_Acer_Saccharinum_Leaf_SpringB_Mat.001
+Ns 53.571404
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Acer_Saccharinum_Leaf_SpringB.jpg
+
+newmtl vray_Acer_Saccharinum_Trunk_Mat
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd Acer_Saccharinum_Trunk.jpg
+
+newmtl vray_Material__299.001
+Ns 53.571404
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Acer_Saccharinum_Leaf_SpringB.jpg
+
+newmtl vray_Material__300.001
+Ns 53.571404
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd Acer_Saccharinum_Leaf_SpringB.jpg

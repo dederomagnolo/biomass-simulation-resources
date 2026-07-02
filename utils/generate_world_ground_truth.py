@@ -6,6 +6,12 @@ import math
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+TREE_STEM_BASE_OFFSETS = {
+    "new_tree_1": {"x": 0.069135, "y": -0.320312, "z": 0.0},
+    "new_tree_2": {"x": 0.414917, "y": 0.000001, "z": 0.0},
+    "new_tree_3": {"x": 0.458424, "y": -0.092327, "z": 0.025507},
+}
+
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Generate CSV/SVG ground truth from a Gazebo world.")
@@ -18,8 +24,17 @@ def parse_args():
 def classify_uri(mesh_uri):
     if "world_jean_tree" in mesh_uri:
         return "tree"
-    if "new_shrub_2" in mesh_uri:
+    if "new_tree_" in mesh_uri:
+        return "tree"
+    if "new_shrub_" in mesh_uri:
         return "bush"
+    return None
+
+
+def model_offset(mesh_uri):
+    for model_name, offset in TREE_STEM_BASE_OFFSETS.items():
+        if f"model://{model_name}/" in mesh_uri:
+            return offset
     return None
 
 
@@ -47,6 +62,13 @@ def read_objects(world_path):
         if len(vals) < 6:
             continue
         x, y, z, roll, pitch, yaw = map(float, vals[:6])
+        offset = model_offset(mesh_uri)
+        if offset is not None:
+            cos_yaw = math.cos(yaw)
+            sin_yaw = math.sin(yaw)
+            x += offset["x"] * cos_yaw - offset["y"] * sin_yaw
+            y += offset["x"] * sin_yaw + offset["y"] * cos_yaw
+            z += offset["z"]
         rows.append(
             {
                 "type": obj_type,
