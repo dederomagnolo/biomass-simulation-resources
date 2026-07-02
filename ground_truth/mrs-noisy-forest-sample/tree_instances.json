@@ -1,0 +1,188 @@
+{
+  "T1": {
+    "tree_id": 1,
+    "model_name": "new_tree_1",
+    "base_model": "new_tree_1",
+    "instance_world_x": 6.17349,
+    "instance_world_y": 12.71759,
+    "n_trunks": 1,
+    "bifurcated": false,
+    "bifurcation_height_m": null,
+    "d_base_cm": 67.8,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dap_cm": 44.5,
+        "world_x": 6.203,
+        "world_y": 12.18,
+        "model_local_x": 0.03,
+        "model_local_y": -0.538
+      }
+    ]
+  },
+  "T2": {
+    "tree_id": 2,
+    "model_name": "new_tree_1_clone",
+    "base_model": "new_tree_1",
+    "instance_world_x": 10.32234,
+    "instance_world_y": 23.02849,
+    "n_trunks": 1,
+    "bifurcated": false,
+    "bifurcation_height_m": null,
+    "d_base_cm": 67.8,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dap_cm": 44.5,
+        "world_x": 10.352,
+        "world_y": 22.49,
+        "model_local_x": 0.03,
+        "model_local_y": -0.538
+      }
+    ]
+  },
+  "T3": {
+    "tree_id": 3,
+    "model_name": "new_tree_2",
+    "base_model": "new_tree_2",
+    "instance_world_x": 14.44552,
+    "instance_world_y": 7.16797,
+    "n_trunks": 1,
+    "bifurcated": false,
+    "bifurcation_height_m": null,
+    "d_base_cm": 78.8,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dap_cm": 45.2,
+        "world_x": 14.884,
+        "world_y": 7.16,
+        "model_local_x": 0.438,
+        "model_local_y": -0.008
+      }
+    ]
+  },
+  "T4": {
+    "tree_id": 4,
+    "model_name": "new_tree_2_clone",
+    "base_model": "new_tree_2",
+    "instance_world_x": 13.02842,
+    "instance_world_y": 14.0898,
+    "n_trunks": 1,
+    "bifurcated": false,
+    "bifurcation_height_m": null,
+    "d_base_cm": 78.8,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dap_cm": 45.2,
+        "world_x": 13.466,
+        "world_y": 14.082,
+        "model_local_x": 0.438,
+        "model_local_y": -0.008
+      }
+    ]
+  },
+  "T5": {
+    "tree_id": 5,
+    "model_name": "new_tree_2_clone_clone",
+    "base_model": "new_tree_2",
+    "instance_world_x": 11.89332,
+    "instance_world_y": 17.4192,
+    "n_trunks": 1,
+    "bifurcated": false,
+    "bifurcation_height_m": null,
+    "d_base_cm": 78.8,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dap_cm": 45.2,
+        "world_x": 12.331,
+        "world_y": 17.411,
+        "model_local_x": 0.438,
+        "model_local_y": -0.008
+      }
+    ]
+  },
+  "T6": {
+    "tree_id": 6,
+    "model_name": "new_tree_2_clone_clone_clone",
+    "base_model": "new_tree_2",
+    "instance_world_x": 3.79604,
+    "instance_world_y": 19.6112,
+    "n_trunks": 1,
+    "bifurcated": false,
+    "bifurcation_height_m": null,
+    "d_base_cm": 78.8,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dap_cm": 45.2,
+        "world_x": 4.234,
+        "world_y": 19.603,
+        "model_local_x": 0.438,
+        "model_local_y": -0.008
+      }
+    ]
+  },
+  "T7": {
+    "tree_id": 7,
+    "model_name": "new_tree_3",
+    "base_model": "new_tree_3",
+    "instance_world_x": 3.94564,
+    "instance_world_y": 4.88602,
+    "n_trunks": 2,
+    "bifurcated": true,
+    "bifurcation_height_m": 0.5,
+    "d_base_cm": 19.2,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dap_cm": 25.0,
+        "world_x": 4.696,
+        "world_y": 4.399,
+        "model_local_x": 0.75,
+        "model_local_y": -0.487
+      },
+      {
+        "trunk_id": 2,
+        "dap_cm": 23.5,
+        "world_x": 4.254,
+        "world_y": 4.998,
+        "model_local_x": 0.308,
+        "model_local_y": 0.112
+      }
+    ],
+    "coord_note": "~0.2m world position uncertainty (Y-up OBJ)"
+  },
+  "T8": {
+    "tree_id": 8,
+    "model_name": "new_tree_3_clone",
+    "base_model": "new_tree_3",
+    "instance_world_x": 9.61677,
+    "instance_world_y": 4.90838,
+    "n_trunks": 2,
+    "bifurcated": true,
+    "bifurcation_height_m": 0.5,
+    "d_base_cm": 19.2,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dap_cm": 25.0,
+        "world_x": 10.367,
+        "world_y": 4.421,
+        "model_local_x": 0.75,
+        "model_local_y": -0.487
+      },
+      {
+        "trunk_id": 2,
+        "dap_cm": 23.5,
+        "world_x": 9.925,
+        "world_y": 5.02,
+        "model_local_x": 0.308,
+        "model_local_y": 0.112
+      }
+    ],
+    "coord_note": "~0.2m world position uncertainty (Y-up OBJ)"
+  }
+}
