@@ -1,87 +1,160 @@
 {
   "world_name": "mrs-noisy-forest-sample",
+  "source_world": "worlds/mrs-noisy-forest-sample.world",
   "limits": {
     "x_min": 2,
     "x_max": 16,
     "y_min": 3,
-    "y_max": 24
+    "y_max": 25
   },
   "trunks": [
     {
       "name": "new_tree_1",
       "source_model": "new_tree_1",
       "trunk_id": 1,
-      "biffurcation_height": 2.67,
-      "obj_position": [6.10435, 13.0379, 0.0],
-      "dap_position": [6.14435, 13.2479]
+      "obj_position": [
+        6.10435,
+        13.0379,
+        0.0
+      ],
+      "mesh_dap_position": [
+        0.02996,
+        -0.5328
+      ],
+      "dap_world_position": [
+        6.13431,
+        12.5051
+      ],
+      "biffurcation_height": 2.67
     },
     {
       "name": "new_tree_1_clone",
       "source_model": "new_tree_1",
       "trunk_id": 1,
-      "biffurcation_height": 2.67,
-      "obj_position": [10.2532, 23.3488, 0.0],
-      "dap_position": [10.2932, 23.5588]
+      "obj_position": [
+        10.2532,
+        23.3488,
+        0.0
+      ],
+      "mesh_dap_position": [
+        0.02996,
+        -0.5328
+      ],
+      "dap_world_position": [
+        10.28316,
+        22.816
+      ],
+      "biffurcation_height": 2.67
     },
     {
       "name": "new_tree_2",
       "source_model": "new_tree_2",
       "trunk_id": 1,
-      "obj_position": [14.0306, 7.16797, 0.0],
-      "dap_position": [13.5906, 8.52797]
+      "obj_position": [
+        14.0306,
+        7.16797,
+        0.0
+      ],
+      "mesh_dap_position": [
+        0.43162,
+        -0.00487
+      ],
+      "dap_world_position": [
+        14.46222,
+        7.1631
+      ]
     },
     {
       "name": "new_tree_2_clone",
       "source_model": "new_tree_2",
       "trunk_id": 1,
-      "obj_position": [12.6135, 14.0898, 0.0],
-      "dap_position": [12.1735, 15.4498]
+      "obj_position": [
+        12.6135,
+        14.0898,
+        0.0
+      ],
+      "mesh_dap_position": [
+        0.43162,
+        -0.00487
+      ],
+      "dap_world_position": [
+        13.04512,
+        14.08493
+      ]
     },
     {
       "name": "new_tree_2_clone_clone",
       "source_model": "new_tree_2",
       "trunk_id": 1,
-      "obj_position": [11.4784, 17.4192, 0.0],
-      "dap_position": [11.0384, 18.7792]
+      "obj_position": [
+        11.4784,
+        17.4192,
+        0.0
+      ],
+      "mesh_dap_position": [
+        0.43162,
+        -0.00487
+      ],
+      "dap_world_position": [
+        11.91002,
+        17.41433
+      ]
     },
     {
       "name": "new_tree_2_clone_clone_clone",
       "source_model": "new_tree_2",
       "trunk_id": 1,
-      "obj_position": [3.38112, 19.6112, 0.0],
-      "dap_position": [2.94112, 20.9712]
+      "obj_position": [
+        3.38112,
+        19.6112,
+        0.0
+      ],
+      "mesh_dap_position": [
+        0.43162,
+        -0.00487
+      ],
+      "dap_world_position": [
+        3.81274,
+        19.60633
+      ]
     },
     {
       "name": "new_tree_8",
       "source_model": "new_tree_8",
       "trunk_id": 1,
-      "biffurcation_height": 1.17,
-      "obj_position": [9.45624, 4.86926, 0.0],
-      "dap_position": [9.77624, 4.90626]
-    },
-    {
-      "name": "new_tree_8",
-      "source_model": "new_tree_8",
-      "trunk_id": 2,
-      "biffurcation_height": 1.17,
-      "obj_position": [9.45624, 4.86926, 0.0],
-      "dap_position": [9.63624, 4.64326]
+      "obj_position": [
+        9.45624,
+        4.86926,
+        0.0
+      ],
+      "mesh_dap_position": [
+        -0.22488,
+        0.01799
+      ],
+      "dap_world_position": [
+        9.23136,
+        4.88725
+      ],
+      "biffurcation_height": 1.17
     },
     {
       "name": "new_tree_8_clone",
       "source_model": "new_tree_8",
       "trunk_id": 1,
-      "biffurcation_height": 1.17,
-      "obj_position": [4.40938, 6.9665, 0.0],
-      "dap_position": [4.72938, 7.0035]
-    },
-    {
-      "name": "new_tree_8_clone",
-      "source_model": "new_tree_8",
-      "trunk_id": 2,
-      "biffurcation_height": 1.17,
-      "obj_position": [4.40938, 6.9665, 0.0],
-      "dap_position": [4.58938, 6.7405]
+      "obj_position": [
+        4.40938,
+        6.9665,
+        0.0
+      ],
+      "mesh_dap_position": [
+        -0.22488,
+        0.01799
+      ],
+      "dap_world_position": [
+        4.1845,
+        6.98449
+      ],
+      "biffurcation_height": 1.17
     }
   ]
 }
