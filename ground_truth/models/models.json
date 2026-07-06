@@ -1,56 +1,77 @@
 [
-    {
-        "model_name": "new_tree_1",
-        "biffurcation_height": 2.67,
-        "bh_trunks": [
-            {
-                "trunk_id": 1,
-                "blender_dbh": 0.46,
-                "position": [0.04, 0.21]
-            }
-        ]
-    },
-    {
-        "model_name": "new_tree_2",
-        "bh_trunks": [
-            {
-                "trunk_id": 1,
-                "blender_dbh": 0.45,
-                "position": [-0.44, 1.36]
-            }
-        ]
-    },
-    {
-        "model_name": "new_tree_4",
-        "biffurcation_height": 0.57,
-        "bh_trunks": [
-            {
-                "trunk_id": 1,
-                "blender_dbh": 0.0928,
-                "position": [-0.040, 0.0165]
-            },
-            {
-                "trunk_id": 2,
-                "blender_dbh": 0.096,
-                "position": [-0.015, -0.163]
-            }
-        ]
-    },
-    {
-        "model_name": "new_tree_8",
-        "biffurcation_height": 1.17,
-        "bh_trunks": [
-            {
-                "trunk_id": 1,
-                "blender_dbh": 0.182,
-                "position": [0.32, 0.037]
-            },
-            {
-                "trunk_id": 2,
-                "blender_dbh": 0.04,
-                "position": [0.18, -0.226]
-            }
-        ]
-    }
-    
+  {
+    "source_model": "new_tree_1",
+    "slice_half_thickness": 0.05,
+    "output_image": "ground_truth/models/slice_fits/new_tree_1_slice_fit.png",
+    "biffurcation_height": 2.67,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dbh_meshe_center": [
+          0.02996,
+          -0.5328
+        ],
+        "dbh": 0.43103
+      }
+    ]
+  },
+  {
+    "source_model": "new_tree_2",
+    "slice_half_thickness": 0.05,
+    "output_image": "ground_truth/models/slice_fits/new_tree_2_slice_fit.png",
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dbh_meshe_center": [
+          0.43162,
+          -0.00487
+        ],
+        "dbh": 0.44013
+      }
+    ]
+  },
+  {
+    "source_model": "new_tree_4",
+    "slice_half_thickness": 0.05,
+    "output_image": "ground_truth/models/slice_fits/new_tree_4_slice_fit.png",
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dbh_meshe_center": [
+          0.03458,
+          -0.01433
+        ],
+        "dbh": 0.09472
+      },
+      {
+        "trunk_id": 2,
+        "dbh_meshe_center": [
+          0.03547,
+          0.16465
+        ],
+        "dbh": 0.09759
+      }
+    ]
+  },
+  {
+    "source_model": "new_tree_8",
+    "slice_half_thickness": 0.05,
+    "track_distance_threshold": 0.45,
+    "output_image": "ground_truth/models/slice_fits/new_tree_8_auto_slice_fit_z1p0.png",
+    "biffurcation_height": 1.17,
+    "tracked_mesh_center": [
+      -0.21869,
+      0.01904
+    ],
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "dbh_meshe_center": [
+          -0.22488,
+          0.01799
+        ],
+        "dbh": 0.18884
+      }
+    ]
+  }
 ]
