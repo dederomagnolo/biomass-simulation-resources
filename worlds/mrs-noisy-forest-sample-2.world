@@ -11,6 +11,7 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
     <physics name='default_physics' default='0' type='ode'>
+      <gravity>0 0 -9.8066</gravity>
       <ode>
         <solver>
           <type>quick</type>
@@ -28,6 +29,7 @@
       <max_step_size>0.004</max_step_size>
       <real_time_factor>1</real_time_factor>
       <real_time_update_rate>250</real_time_update_rate>
+      <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     </physics>
     <scene>
       <shadows>false</shadows>
@@ -54,10 +56,10 @@
       </spot>
     </light>
     <model name='ground_plane'>
-      <static>1</static>
+      <static>true</static>
       <link name='link'>
         <collision name='collision'>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose>0 0 0 0 0 0</pose>
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -70,20 +72,12 @@
                 <mu>1</mu>
                 <mu2>1</mu2>
               </ode>
-              <torsional>
-                <ode/>
-              </torsional>
             </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
           </surface>
-          <max_contacts>10</max_contacts>
         </collision>
         <visual name='grass'>
-          <pose>0 0 0 0 -0 0</pose>
-          <cast_shadows>0</cast_shadows>
+          <pose>0 0 0 0 0 0</pose>
+          <cast_shadows>false</cast_shadows>
           <geometry>
             <plane>
               <normal>0 0 1</normal>
@@ -96,22 +90,15 @@
               <name>Gazebo/Grass</name>
             </script>
           </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
+        </visual> 
       </link>
     </model>
-    <gui fullscreen='0'>
+    <gui>
       <camera name='camera'>
-        <pose>-6.56942 -14.3319 4.03515 0 -0.024 1.106</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
+        <pose>-60 -100 30 0 0.4 0.89</pose>
       </camera>
     </gui>
 
-    <gravity>0 0 -9.8066</gravity>
-    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
     <wind/>
     <model name='new_tree_2'>
