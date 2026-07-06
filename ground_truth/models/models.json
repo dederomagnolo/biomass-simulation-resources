@@ -1,0 +1,56 @@
+[
+    {
+        "model_name": "new_tree_1",
+        "biffurcation_height": 2.67,
+        "bh_trunks": [
+            {
+                "trunk_id": 1,
+                "blender_dbh": 0.46,
+                "position": [0.04, 0.21]
+            }
+        ]
+    },
+    {
+        "model_name": "new_tree_2",
+        "bh_trunks": [
+            {
+                "trunk_id": 1,
+                "blender_dbh": 0.45,
+                "position": [-0.44, 1.36]
+            }
+        ]
+    },
+    {
+        "model_name": "new_tree_4",
+        "biffurcation_height": 0.57,
+        "bh_trunks": [
+            {
+                "trunk_id": 1,
+                "blender_dbh": 0.0928,
+                "position": [-0.040, 0.0165]
+            },
+            {
+                "trunk_id": 2,
+                "blender_dbh": 0.096,
+                "position": [-0.015, -0.163]
+            }
+        ]
+    },
+    {
+        "model_name": "new_tree_8",
+        "biffurcation_height": 1.17,
+        "bh_trunks": [
+            {
+                "trunk_id": 1,
+                "blender_dbh": 0.182,
+                "position": [0.32, 0.037]
+            },
+            {
+                "trunk_id": 2,
+                "blender_dbh": 0.04,
+                "position": [0.18, -0.226]
+            }
+        ]
+    }
+    
+]
