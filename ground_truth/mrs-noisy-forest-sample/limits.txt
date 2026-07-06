@@ -1,4 +1,4 @@
-﻿x_min=2
-x_max=16
+x_min=2
+x_max=17
 y_min=2
 y_max=25
