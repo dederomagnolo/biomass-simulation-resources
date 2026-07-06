@@ -1,0 +1,87 @@
+{
+  "world_name": "mrs-noisy-forest-sample",
+  "limits": {
+    "x_min": 2,
+    "x_max": 16,
+    "y_min": 3,
+    "y_max": 24
+  },
+  "trunks": [
+    {
+      "name": "new_tree_1",
+      "source_model": "new_tree_1",
+      "trunk_id": 1,
+      "biffurcation_height": 2.67,
+      "obj_position": [6.10435, 13.0379, 0.0],
+      "dap_position": [6.14435, 13.2479]
+    },
+    {
+      "name": "new_tree_1_clone",
+      "source_model": "new_tree_1",
+      "trunk_id": 1,
+      "biffurcation_height": 2.67,
+      "obj_position": [10.2532, 23.3488, 0.0],
+      "dap_position": [10.2932, 23.5588]
+    },
+    {
+      "name": "new_tree_2",
+      "source_model": "new_tree_2",
+      "trunk_id": 1,
+      "obj_position": [14.0306, 7.16797, 0.0],
+      "dap_position": [13.5906, 8.52797]
+    },
+    {
+      "name": "new_tree_2_clone",
+      "source_model": "new_tree_2",
+      "trunk_id": 1,
+      "obj_position": [12.6135, 14.0898, 0.0],
+      "dap_position": [12.1735, 15.4498]
+    },
+    {
+      "name": "new_tree_2_clone_clone",
+      "source_model": "new_tree_2",
+      "trunk_id": 1,
+      "obj_position": [11.4784, 17.4192, 0.0],
+      "dap_position": [11.0384, 18.7792]
+    },
+    {
+      "name": "new_tree_2_clone_clone_clone",
+      "source_model": "new_tree_2",
+      "trunk_id": 1,
+      "obj_position": [3.38112, 19.6112, 0.0],
+      "dap_position": [2.94112, 20.9712]
+    },
+    {
+      "name": "new_tree_8",
+      "source_model": "new_tree_8",
+      "trunk_id": 1,
+      "biffurcation_height": 1.17,
+      "obj_position": [9.45624, 4.86926, 0.0],
+      "dap_position": [9.77624, 4.90626]
+    },
+    {
+      "name": "new_tree_8",
+      "source_model": "new_tree_8",
+      "trunk_id": 2,
+      "biffurcation_height": 1.17,
+      "obj_position": [9.45624, 4.86926, 0.0],
+      "dap_position": [9.63624, 4.64326]
+    },
+    {
+      "name": "new_tree_8_clone",
+      "source_model": "new_tree_8",
+      "trunk_id": 1,
+      "biffurcation_height": 1.17,
+      "obj_position": [4.40938, 6.9665, 0.0],
+      "dap_position": [4.72938, 7.0035]
+    },
+    {
+      "name": "new_tree_8_clone",
+      "source_model": "new_tree_8",
+      "trunk_id": 2,
+      "biffurcation_height": 1.17,
+      "obj_position": [4.40938, 6.9665, 0.0],
+      "dap_position": [4.58938, 6.7405]
+    }
+  ]
+}
