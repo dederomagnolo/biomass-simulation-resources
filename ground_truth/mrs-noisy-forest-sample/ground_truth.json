@@ -11,7 +11,7 @@
     {
       "name": "new_tree_1",
       "source_model": "new_tree_1",
-      "id": 1,
+      "tree_id": 1,
       "obj_position": [
         6.10435,
         13.0379,
@@ -30,7 +30,7 @@
     {
       "name": "new_tree_1_clone",
       "source_model": "new_tree_1",
-      "id": 2,
+      "tree_id": 2,
       "obj_position": [
         10.2532,
         23.3488,
@@ -49,7 +49,7 @@
     {
       "name": "new_tree_2",
       "source_model": "new_tree_2",
-      "id": 3,
+      "tree_id": 3,
       "obj_position": [
         14.0306,
         7.16797,
@@ -67,7 +67,7 @@
     {
       "name": "new_tree_2_clone",
       "source_model": "new_tree_2",
-      "id": 4,
+      "tree_id": 4,
       "obj_position": [
         12.6135,
         14.0898,
@@ -85,7 +85,7 @@
     {
       "name": "new_tree_2_clone_clone",
       "source_model": "new_tree_2",
-      "id": 5,
+      "tree_id": 5,
       "obj_position": [
         11.4784,
         17.4192,
@@ -103,7 +103,7 @@
     {
       "name": "new_tree_2_clone_clone_clone",
       "source_model": "new_tree_2",
-      "id": 6,
+      "tree_id": 6,
       "obj_position": [
         3.38112,
         19.6112,
@@ -121,7 +121,7 @@
     {
       "name": "new_tree_8",
       "source_model": "new_tree_8",
-      "id": 7,
+      "tree_id": 7,
       "obj_position": [
         9.45624,
         4.86926,
@@ -140,7 +140,7 @@
     {
       "name": "new_tree_8_clone",
       "source_model": "new_tree_8",
-      "id": 8,
+      "tree_id": 8,
       "obj_position": [
         4.40938,
         6.9665,
