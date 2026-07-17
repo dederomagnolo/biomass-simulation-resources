@@ -297,5 +297,257 @@
         0
       ]
     }
+  ],
+  "bushes": [
+    {
+      "bush_id": 1,
+      "name": "Bush 2",
+      "source_model": "bush_2",
+      "obj_position": [
+        -6.04361,
+        -5.68985,
+        0
+      ]
+    },
+    {
+      "bush_id": 2,
+      "name": "Bush 2_clone",
+      "source_model": "bush_2",
+      "obj_position": [
+        -7.52451,
+        -6.09843,
+        0
+      ]
+    },
+    {
+      "bush_id": 3,
+      "name": "Bush 2_clone_clone",
+      "source_model": "bush_2",
+      "obj_position": [
+        -2.83557,
+        -8.43174,
+        0
+      ]
+    },
+    {
+      "bush_id": 4,
+      "name": "Bush 2_clone_clone_0",
+      "source_model": "bush_2",
+      "obj_position": [
+        3.87929,
+        -7.17497,
+        0
+      ]
+    },
+    {
+      "bush_id": 5,
+      "name": "Bush 2_clone_clone_0_clone",
+      "source_model": "bush_2",
+      "obj_position": [
+        -3.24013,
+        -6.28072,
+        0
+      ]
+    },
+    {
+      "bush_id": 6,
+      "name": "Bush 2_clone_clone_1",
+      "source_model": "bush_2",
+      "obj_position": [
+        8.5224,
+        -6.12644,
+        0
+      ]
+    },
+    {
+      "bush_id": 7,
+      "name": "Bush 2_clone_clone_1_clone",
+      "source_model": "bush_2",
+      "obj_position": [
+        10.3527,
+        -9.39984,
+        0
+      ]
+    },
+    {
+      "bush_id": 8,
+      "name": "Bush 2_clone_clone_1_clone_0",
+      "source_model": "bush_2",
+      "obj_position": [
+        13.4885,
+        -0.88176,
+        0
+      ]
+    },
+    {
+      "bush_id": 9,
+      "name": "Bush 2_clone_clone_1_clone_1",
+      "source_model": "bush_2",
+      "obj_position": [
+        12.7046,
+        1.20077,
+        0
+      ]
+    },
+    {
+      "bush_id": 10,
+      "name": "Bush 2_clone_clone_1_clone_2",
+      "source_model": "bush_2",
+      "obj_position": [
+        12.1716,
+        10.5134,
+        0
+      ]
+    },
+    {
+      "bush_id": 11,
+      "name": "Bush 2_clone_clone_1_clone_3",
+      "source_model": "bush_2",
+      "obj_position": [
+        10.5415,
+        6.9661,
+        0
+      ]
+    },
+    {
+      "bush_id": 12,
+      "name": "Bush 2_clone_clone_1_clone_4",
+      "source_model": "bush_2",
+      "obj_position": [
+        -7.62479,
+        10.3688,
+        0
+      ]
+    },
+    {
+      "bush_id": 13,
+      "name": "Bush 2_clone_clone_1_clone_5",
+      "source_model": "bush_2",
+      "obj_position": [
+        -5.97278,
+        12.6192,
+        0
+      ]
+    },
+    {
+      "bush_id": 14,
+      "name": "Bush 3",
+      "source_model": "bush_3",
+      "obj_position": [
+        1.79788,
+        -10.9738,
+        0
+      ]
+    },
+    {
+      "bush_id": 15,
+      "name": "Bush 3_clone",
+      "source_model": "bush_3",
+      "obj_position": [
+        0.18551,
+        -12.7582,
+        0
+      ]
+    },
+    {
+      "bush_id": 16,
+      "name": "Bush 3_clone_0",
+      "source_model": "bush_3",
+      "obj_position": [
+        3.10593,
+        -13.3626,
+        0
+      ]
+    },
+    {
+      "bush_id": 17,
+      "name": "Bush 3_clone_1",
+      "source_model": "bush_3",
+      "obj_position": [
+        2.80683,
+        11.7862,
+        0
+      ]
+    },
+    {
+      "bush_id": 18,
+      "name": "Bush 3_clone_2",
+      "source_model": "bush_3",
+      "obj_position": [
+        4.00314,
+        14.5781,
+        0
+      ]
+    },
+    {
+      "bush_id": 19,
+      "name": "Bush 3_clone_3",
+      "source_model": "bush_3",
+      "obj_position": [
+        2.06905,
+        14.0669,
+        0
+      ]
+    },
+    {
+      "bush_id": 20,
+      "name": "Bush 3_clone_3_clone",
+      "source_model": "bush_3",
+      "obj_position": [
+        5.68897,
+        4.83527,
+        0
+      ]
+    },
+    {
+      "bush_id": 21,
+      "name": "Bush 3_clone_4",
+      "source_model": "bush_3",
+      "obj_position": [
+        17.1021,
+        -10.6666,
+        0
+      ]
+    },
+    {
+      "bush_id": 22,
+      "name": "Bush 3_clone_5",
+      "source_model": "bush_3",
+      "obj_position": [
+        18.6119,
+        -8.9659,
+        0
+      ]
+    },
+    {
+      "bush_id": 23,
+      "name": "Bush 3_clone_6",
+      "source_model": "bush_3",
+      "obj_position": [
+        21.1105,
+        -7.86362,
+        0
+      ]
+    },
+    {
+      "bush_id": 24,
+      "name": "Bush 3_clone_7",
+      "source_model": "bush_3",
+      "obj_position": [
+        20.08,
+        -11.3561,
+        0
+      ]
+    },
+    {
+      "bush_id": 25,
+      "name": "Bush 3_clone_8",
+      "source_model": "bush_3",
+      "obj_position": [
+        16.4936,
+        -7.93905,
+        0
+      ]
+    }
   ]
 }

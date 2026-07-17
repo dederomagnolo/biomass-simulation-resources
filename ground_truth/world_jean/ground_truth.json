@@ -1,0 +1,212 @@
+{
+  "world_name": "world_jean",
+  "limits": {
+    "x_min": -6,
+    "x_max": 6,
+    "y_min": -6,
+    "y_max": 6
+  },
+  "trunks": [
+    {
+      "tree_id": 1,
+      "name": "world_jean_tree_001",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        1.98624,
+        0.40476,
+        0
+      ]
+    },
+    {
+      "tree_id": 2,
+      "name": "world_jean_tree_002",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "tree_id": 3,
+      "name": "world_jean_tree_003",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -2.32104,
+        4.74936,
+        0
+      ]
+    },
+    {
+      "tree_id": 4,
+      "name": "world_jean_tree_004",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        0.75437,
+        -0.72433,
+        0
+      ]
+    },
+    {
+      "tree_id": 5,
+      "name": "world_jean_tree_005",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        0.25764,
+        -2.96332,
+        0
+      ]
+    },
+    {
+      "tree_id": 6,
+      "name": "world_jean_tree_006",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -3.91537,
+        -4.70962,
+        0
+      ]
+    },
+    {
+      "tree_id": 7,
+      "name": "world_jean_tree_007",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -4.35099,
+        -4.47534,
+        0
+      ]
+    },
+    {
+      "tree_id": 8,
+      "name": "world_jean_tree_008",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        0.02728,
+        -2.63339,
+        0
+      ]
+    },
+    {
+      "tree_id": 9,
+      "name": "world_jean_tree_009",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -2.09123,
+        -0.92379,
+        0
+      ]
+    },
+    {
+      "tree_id": 10,
+      "name": "world_jean_tree_010",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -2.37871,
+        1.91497,
+        0
+      ]
+    },
+    {
+      "tree_id": 11,
+      "name": "world_jean_tree_011",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -1.14314,
+        3.84188,
+        0
+      ]
+    },
+    {
+      "tree_id": 12,
+      "name": "world_jean_tree_012",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -3.0628,
+        1.60522,
+        0
+      ]
+    },
+    {
+      "tree_id": 13,
+      "name": "world_jean_tree_013",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        4.68516,
+        3.03878,
+        0
+      ]
+    },
+    {
+      "tree_id": 14,
+      "name": "world_jean_tree_014",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -1.23828,
+        2.14476,
+        0
+      ]
+    },
+    {
+      "tree_id": 15,
+      "name": "world_jean_tree_015",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        3.55672,
+        1.34769,
+        0
+      ]
+    },
+    {
+      "tree_id": 16,
+      "name": "world_jean_tree_016",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        3.247,
+        -2.14999,
+        0
+      ]
+    },
+    {
+      "tree_id": 17,
+      "name": "world_jean_tree_017",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        2.19253,
+        -3.88026,
+        0
+      ]
+    },
+    {
+      "tree_id": 18,
+      "name": "world_jean_tree_018",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        3.05098,
+        0.22397,
+        0
+      ]
+    },
+    {
+      "tree_id": 19,
+      "name": "world_jean_tree_019",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -0.66592,
+        -3.66006,
+        0
+      ]
+    },
+    {
+      "tree_id": 20,
+      "name": "world_jean_tree_020",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -1.80608,
+        -1.95829,
+        0
+      ]
+    }
+  ],
+  "bushes": []
+}
