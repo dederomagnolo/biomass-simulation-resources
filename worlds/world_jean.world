@@ -26,8 +26,8 @@
     </light>
 
     <include>
-      <uri>model://green_ground</uri>
-      <name>green_ground</name>
+      <uri>model://world_jean_ground</uri>
+      <name>world_jean_ground</name>
       <pose>0 0 0 0 0 0</pose>
     </include>
 
@@ -158,4 +158,3 @@
     </gui>
   </world>
 </sdf>
-
