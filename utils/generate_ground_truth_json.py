@@ -30,6 +30,10 @@ def classify_uri(mesh_uri):
         return "tree"
     if "new_tree_" in mesh_uri:
         return "tree"
+    if "new_shrub_" in mesh_uri:
+        return "bush"
+    if "bush_" in mesh_uri:
+        return "bush"
     return None
 
 
@@ -66,7 +70,7 @@ def instance_sort_key(item):
     return (root_name, clone_count, name)
 
 
-def read_tree_instances(world_path):
+def read_instances(world_path):
     root = ET.parse(world_path).getroot()
     world = root.find("world")
     if world is None:
@@ -82,7 +86,8 @@ def read_tree_instances(world_path):
                 mesh_uri = uri
                 break
 
-        if classify_uri(mesh_uri) != "tree":
+        obj_type = classify_uri(mesh_uri)
+        if obj_type is None:
             continue
 
         pose_text = (model.findtext("pose") or "").strip()
@@ -93,6 +98,7 @@ def read_tree_instances(world_path):
         x, y, z, _, _, yaw = map(float, values[:6])
         instances.append(
             {
+                "type": obj_type,
                 "name": model_name,
                 "base_model": get_base_model(mesh_uri),
                 "obj_position": [x, y, z],
@@ -101,10 +107,11 @@ def read_tree_instances(world_path):
         )
 
     if not instances:
-        raise RuntimeError(f"No tree models found in {world_path}")
+        raise RuntimeError(f"No supported vegetation models found in {world_path}")
 
-    instances.sort(key=instance_sort_key)
-    return instances
+    tree_instances = sorted((item for item in instances if item["type"] == "tree"), key=instance_sort_key)
+    bush_instances = sorted((item for item in instances if item["type"] == "bush"), key=instance_sort_key)
+    return tree_instances, bush_instances
 
 
 def build_trees(instances, models_catalog):
@@ -173,9 +180,35 @@ def build_trees(instances, models_catalog):
     return trunks
 
 
-def compute_limits(trunks):
-    xs = [trunk["obj_position"][0] for trunk in trunks]
-    ys = [trunk["obj_position"][1] for trunk in trunks]
+def build_bushes(instances):
+    bushes = []
+
+    for bush_id, instance in enumerate(instances, start=1):
+        obj_x, obj_y, obj_z = instance["obj_position"]
+        bushes.append(
+            {
+                "bush_id": bush_id,
+                "name": instance["name"],
+                "source_model": instance["base_model"],
+                "obj_position": [
+                    round_value(obj_x, 5),
+                    round_value(obj_y, 5),
+                    round_value(obj_z, 5),
+                ],
+            }
+        )
+
+    return bushes
+
+
+def compute_limits(*collections):
+    positions = []
+    for collection in collections:
+        for item in collection:
+            positions.append(item["obj_position"])
+
+    xs = [position[0] for position in positions]
+    ys = [position[1] for position in positions]
     return {
         "x_min": math.floor(min(xs) - 1.0),
         "x_max": math.ceil(max(xs) + 1.0),
@@ -184,12 +217,12 @@ def compute_limits(trunks):
     }
 
 
-def build_payload(dataset_name, world_path, repo_root, trunks):
+def build_payload(dataset_name, trunks, bushes):
     return {
         "world_name": dataset_name,
-        "source_world": world_path.relative_to(repo_root).as_posix(),
-        "limits": compute_limits(trunks),
+        "limits": compute_limits(trunks, bushes),
         "trunks": trunks,
+        "bushes": bushes,
     }
 
 
@@ -207,10 +240,11 @@ def main():
         raise FileNotFoundError(f"Models file not found: {models_path}")
 
     models_catalog = load_models_catalog(models_path)
-    instances = read_tree_instances(world_path)
-    trunks = build_trees(instances, models_catalog)
+    tree_instances, bush_instances = read_instances(world_path)
+    trunks = build_trees(tree_instances, models_catalog)
+    bushes = build_bushes(bush_instances)
 
-    payload = build_payload(dataset_name, world_path, repo_root, trunks)
+    payload = build_payload(dataset_name, trunks, bushes)
     json_text = json.dumps(payload, ensure_ascii=True, indent=2) + "\n"
 
     if args.print_only:
