@@ -110,3 +110,9 @@ catkin build
 source /catkin_ws/devel/setup.bash
 rosrun biomass_simulation_resources run-world.sh world_jean
 ```
+
+## MRS plugins
+
+The mrs_template.world and the MRS example worlds include the libMrsGazeboCommonResources_StaticTransformRepublisher.so plugin. It is required when using the world with the MRS (MRS UAV System) because it republishes the static transforms created by Gazebo in the TF tree used by MRS and ROS. Without it, frames such as the world/Gazebo frames may not be available to MRS nodes and RViz, which can cause incorrect vehicle and sensor poses or missing transforms.
+
+This library is provided by the MRS Gazebo common resources package, so that package must be installed and sourced together with the MRS workspace before launching an MRS world. The plugin is specific to MRS integration; worlds that are used only with Gazebo Classic do not need it.
