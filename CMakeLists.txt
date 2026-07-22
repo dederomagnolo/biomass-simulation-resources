@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.8)
 project(biomass_simulation_resources)
 
 find_package(ament_cmake REQUIRED)
@@ -9,7 +9,7 @@ install(DIRECTORY launch models worlds
 )
 
 install(PROGRAMS
-  run-world
+  run-world.sh
   DESTINATION lib/${PROJECT_NAME}
 )
 
