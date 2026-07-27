@@ -69,84 +69,6 @@
       </link>
       <pose>4.52183 3.7767 0 0 -0 0</pose>
     </model>
-    <model name="world_jean_tree_clone_clone">
-      <static>1</static>
-      <link name="link">
-        <collision name="collision">
-          <pose>0 0 1 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.22</radius>
-              <length>2</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode />
-            </contact>
-            <bounce />
-            <friction>
-              <torsional>
-                <ode />
-              </torsional>
-              <ode />
-            </friction>
-          </surface>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>model://world_jean_tree/meshes/world_jean_tree.obj</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>6.97302 1.5287 0 0 -0 0</pose>
-    </model>
-    <model name="world_jean_tree_clone_clone_clone">
-      <static>1</static>
-      <link name="link">
-        <collision name="collision">
-          <pose>0 0 1 0 -0 0</pose>
-          <geometry>
-            <cylinder>
-              <radius>0.22</radius>
-              <length>2</length>
-            </cylinder>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode />
-            </contact>
-            <bounce />
-            <friction>
-              <torsional>
-                <ode />
-              </torsional>
-              <ode />
-            </friction>
-          </surface>
-        </collision>
-        <visual name="visual">
-          <geometry>
-            <mesh>
-              <uri>model://world_jean_tree/meshes/world_jean_tree.obj</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>8.27403 4.78452 0 0 -0 0</pose>
-    </model>
     <model name="world_jean_tree_clone_clone_clone_0">
       <static>1</static>
       <link name="link">
@@ -186,7 +108,7 @@
       </link>
       <pose>4.97222 6.81452 0 0 -0 0</pose>
     </model>
-    <model name="world_jean_tree_clone_clone_0_clone_1_clone_1">
+    <model name="world_jean_tree_clone_clone_0">
       <static>1</static>
       <link name="link">
         <collision name="collision">
@@ -223,7 +145,7 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
-      <pose>11.2258 1.96661 0 0 -0 0</pose>
+      <pose>4.20394 4.21795 0 0 -0 0</pose>
     </model>
   </world>
 </sdf>
