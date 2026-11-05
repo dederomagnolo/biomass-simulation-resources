@@ -51,13 +51,13 @@ You can also pass:
 - world name with extension:
 
 ```bash
-rosrun biomass_simulation_resources run-world world_template.world
+rosrun biomass_simulation_resources run-world.sh world_template.world
 ```
 
 - absolute path to a `.world` file:
 
 ```bash
-rosrun biomass_simulation_resources run-world /absolute/path/to/world_jean.world
+rosrun biomass_simulation_resources run-world.sh /absolute/path/to/world_jean.world
 ```
 
 `run-world` automatically configures `GAZEBO_MODEL_PATH` and `GAZEBO_RESOURCE_PATH`.
@@ -89,7 +89,7 @@ cp worlds/world_template.world worlds/my_new_world.world
 3. Run it:
 
 ```bash
-rosrun biomass_simulation_resources run-world my_new_world
+rosrun biomass_simulation_resources run-world.sh my_new_world
 ```
 
 ## Docker (optional)

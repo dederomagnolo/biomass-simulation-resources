@@ -10,7 +10,7 @@ catkin_add_env_hooks(50.${PROJECT_NAME}
   DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/env-hooks
 )
 
-install(DIRECTORY launch models worlds
+install(DIRECTORY launch models worlds ground_truth
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   USE_SOURCE_PERMISSIONS
 )
