@@ -41,7 +41,7 @@ source install/setup.bash
 3. Run a world:
 
 ```bash
-rosrun biomass_simulation_resources run-world.sh world_jean
+ros2 run biomass_simulation_resources run-world world_jean
 ```
 
 You can also pass:

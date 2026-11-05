@@ -11,10 +11,12 @@ install(DIRECTORY launch models worlds
 install(PROGRAMS
   run-world.sh
   DESTINATION lib/${PROJECT_NAME}
+  RENAME run-world
 )
 
-install(FILES resource/${PROJECT_NAME}
-  DESTINATION share/ament_index/resource_index/packages
+install(DIRECTORY ground_truth
+  DESTINATION share/${PROJECT_NAME}
+  USE_SOURCE_PERMISSIONS
 )
 
 install(FILES package.xml
