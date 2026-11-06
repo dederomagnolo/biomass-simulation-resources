@@ -1,262 +1,197 @@
 #!/usr/bin/env python3
+"""Generate JSON GT for SDF worlds using models/models.json classifications."""
+import argparse, json, math, pathlib, xml.etree.ElementTree as ET
+from xml.sax.saxutils import escape
 
-import argparse
-import json
-import math
-import xml.etree.ElementTree as ET
-from pathlib import Path
+def pose_of(element):
+    raw=(element.findtext('pose') or '').split()
+    if not raw:return [0.0]*6
+    if len(raw)!=6:raise ValueError(f'Expected x y z roll pitch yaw: {raw}')
+    values=[float(x) for x in raw]
+    if not all(math.isfinite(x) for x in values):raise ValueError('Non-finite pose')
+    return values
 
+def model_key(element):
+    if element.tag=='include':
+        uri=(element.findtext('uri') or '').strip()
+        if uri.startswith('model://'):return uri[8:].strip('/')
+        return uri or (element.findtext('name') or 'unknown')
+    for mesh in element.findall('.//mesh'):
+        uri=(mesh.findtext('uri') or '').strip()
+        if uri.startswith('model://'):
+            value=uri[8:].strip('/')
+            if value.startswith('forest-gen-models/'):return '/'.join(value.split('/')[:2])
+            return value.split('/')[0]
+    return element.get('name') or 'unknown'
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Generate a minimal ground_truth.json from a Gazebo world.")
-    parser.add_argument("world_name", help="World base name, with or without .world")
-    parser.add_argument("--worlds-dir", default="worlds", help="Directory containing .world files")
-    parser.add_argument("--ground-truth-dir", default="ground_truth", help="Ground-truth root directory")
-    parser.add_argument(
-        "--models-path",
-        default="ground_truth/models/models.json",
-        help="Path to the calibrated model DAP catalog JSON",
-    )
-    parser.add_argument("--print-only", action="store_true", help="Print JSON instead of writing the file")
-    return parser.parse_args()
-
-
-def round_value(value, digits):
-    return round(float(value), digits)
-
-
-def classify_uri(mesh_uri):
-    if "world_jean_tree" in mesh_uri:
-        return "tree"
-    if "new_tree_" in mesh_uri:
-        return "tree"
-    if "new_shrub_" in mesh_uri:
-        return "bush"
-    if "bush_" in mesh_uri:
-        return "bush"
-    return None
-
-
-def get_base_model(mesh_uri):
-    prefix = "model://"
-    if not mesh_uri.startswith(prefix):
-        return ""
-    remainder = mesh_uri[len(prefix) :]
-    return remainder.split("/", 1)[0]
-
-
-def load_models_catalog(models_path):
-    with open(models_path, "r", encoding="utf-8") as f:
-        items = json.load(f)
-
-    if not isinstance(items, list):
-        raise RuntimeError(f"Expected a list in models catalog: {models_path}")
-
-    catalog = {}
-    for item in items:
-        source_model = (item.get("source_model") or item.get("name") or item.get("model_name") or "").strip()
-        if not source_model:
-            raise RuntimeError(f"Catalog entry missing source model key: {item}")
-        if source_model in catalog:
-            raise RuntimeError(f"Duplicate catalog entry for source model '{source_model}'")
-        catalog[source_model] = item
+def load_catalog(path):
+    data=json.loads(path.read_text(encoding='utf-8'))
+    catalog={}
+    for item in data:
+        key=item['source_model']
+        if key in catalog or item['type'] not in ('tree','bush','object'):raise ValueError(f'Invalid catalog entry: {key}')
+        catalog[key]=item
+    for key,item in list(catalog.items()):
+        if 'alias_of' in item:
+            target=item['alias_of']
+            if target not in catalog:raise ValueError(f'Unknown catalog alias target: {target}')
+            catalog[key]={**catalog[target],'source_model':key}
     return catalog
 
+def generate(world_path,catalog):
+    world=ET.parse(world_path).getroot().find('world')
+    if world is None:raise ValueError('No <world>')
+    trunks=[];bushes=[];misc=[];tree_id=0;seen=set()
+    for element in world:
+        if element.tag not in ('include','model'):continue
+        key=model_key(element)
+        name=(element.findtext('name') if element.tag=='include' else element.get('name')) or key
+        if name in seen:raise ValueError(f'Duplicate instance name: {name}')
+        seen.add(name)
+        x,y,z,roll,pitch,yaw=pose_of(element)
+        entry={'name':name,'source_model':key,'obj_position':[x,y,z],'yaw':yaw}
+        meta=catalog.get(key,{'type':'object'})
+        if meta['type']=='tree':
+            tree_id+=1
+            stems=meta.get('trunks') or [{'trunk_id':1}]
+            for stem in stems:
+                tree={'tree_id':tree_id,**entry}
+                if len(stems)>1:tree['trunk_id']=int(stem['trunk_id'])
+                center=stem.get('mesh_dbh_position')
+                if center is not None:
+                    if abs(roll)>1e-9 or abs(pitch)>1e-9:raise ValueError(f'Tilted calibrated tree: {name}')
+                    dx,dy=map(float,center)
+                    tree['mesh_dbh_position']=[dx,dy]
+                    tree['dbh_world_position']=[round(x+dx*math.cos(yaw)-dy*math.sin(yaw),6),round(y+dx*math.sin(yaw)+dy*math.cos(yaw),6)]
+                for field in ('dbh','height'):
+                    value=stem.get(field,meta.get(field))
+                    if value is not None:tree[field]=value
+                if 'biffurcation_height' in meta:tree['biffurcation_height']=meta['biffurcation_height']
+                trunks.append(tree)
+        elif meta['type']=='bush':bushes.append({'bush_id':len(bushes)+1,**entry})
+        else:misc.append({'object_id':len(misc)+1,'type':'object',**entry})
+    # Match legacy GT convention: vegetation extent with a 1 m margin.
+    positions=[a['obj_position'] for a in trunks+bushes]
+    if not positions:positions=[a['obj_position'] for a in misc]
+    if positions:
+        xs=[p[0] for p in positions];ys=[p[1] for p in positions]
+        limits={'x_min':math.floor(min(xs)-1),'x_max':math.ceil(max(xs)+1),'y_min':math.floor(min(ys)-1),'y_max':math.ceil(max(ys)+1)}
+    else:raise ValueError('World has no positioned models/includes')
+    return {'world_name':world.get('name'),'limits':limits,'trunks':trunks,'bushes':bushes,'misc':misc}
 
-def instance_sort_key(item):
-    name = item["name"]
-    clone_count = name.count("_clone")
-    root_name = name.split("_clone", 1)[0]
-    return (root_name, clone_count, name)
-
-
-def read_instances(world_path):
-    root = ET.parse(world_path).getroot()
-    world = root.find("world")
-    if world is None:
-        raise RuntimeError(f"No <world> element found in {world_path}")
-
-    instances = []
-    for model in world.findall("model"):
-        model_name = (model.get("name") or "").strip()
-        mesh_uri = ""
-        for mesh in model.findall(".//mesh"):
-            uri = (mesh.findtext("uri") or "").strip()
-            if uri:
-                mesh_uri = uri
-                break
-
-        obj_type = classify_uri(mesh_uri)
-        if obj_type is None:
-            continue
-
-        pose_text = (model.findtext("pose") or "").strip()
-        values = pose_text.split()
-        if len(values) < 6:
-            continue
-
-        x, y, z, _, _, yaw = map(float, values[:6])
-        instances.append(
-            {
-                "type": obj_type,
-                "name": model_name,
-                "base_model": get_base_model(mesh_uri),
-                "obj_position": [x, y, z],
-                "yaw": yaw,
-            }
-        )
-
-    if not instances:
-        raise RuntimeError(f"No supported vegetation models found in {world_path}")
-
-    tree_instances = sorted((item for item in instances if item["type"] == "tree"), key=instance_sort_key)
-    bush_instances = sorted((item for item in instances if item["type"] == "bush"), key=instance_sort_key)
-    return tree_instances, bush_instances
-
-
-def build_trees(instances, models_catalog):
-    trunks = []
-
-    for tree_id, instance in enumerate(instances, start=1):
-        base_model = instance["base_model"]
-        model_meta = models_catalog.get(base_model)
-        obj_x, obj_y, obj_z = instance["obj_position"]
-        if model_meta is None:
-            entry = {
-                "tree_id": tree_id,
-                "name": instance["name"],
-                "source_model": base_model,
-                "obj_position": [
-                    round_value(obj_x, 5),
-                    round_value(obj_y, 5),
-                    round_value(obj_z, 5),
-                ],
-            }
-            trunks.append(entry)
-            continue
-
-        cos_yaw = math.cos(instance["yaw"])
-        sin_yaw = math.sin(instance["yaw"])
-        bif_height = model_meta.get("biffurcation_height")
-        model_trunks = model_meta.get("trunks", [])
-
-        if not model_trunks:
-            raise RuntimeError(f"Catalog entry for '{base_model}' has no trunks")
-
-        sorted_trunks = sorted(model_trunks, key=lambda item: int(item.get("trunk_id", 0)))
-
-        for trunk in sorted_trunks:
-            trunk_id = trunk.get("trunk_id")
-            if trunk_id is None:
-                raise RuntimeError(f"Catalog entry for '{base_model}' has a trunk without trunk_id")
-
-            entry = {
-                "tree_id": tree_id,
-                "name": instance["name"],
-                "source_model": base_model,
-                "obj_position": [
-                    round_value(obj_x, 5),
-                    round_value(obj_y, 5),
-                    round_value(obj_z, 5),
-                ],
-            }
-
-            if len(sorted_trunks) > 1:
-                entry["trunk_id"] = int(trunk_id)
-
-            if "dbh_meshe_center" in trunk:
-                local_x = float(trunk["dbh_meshe_center"][0])
-                local_y = float(trunk["dbh_meshe_center"][1])
-                dap_x = obj_x + local_x * cos_yaw - local_y * sin_yaw
-                dap_y = obj_y + local_x * sin_yaw + local_y * cos_yaw
-                entry["mesh_dap_position"] = [round_value(local_x, 5), round_value(local_y, 5)]
-                entry["dap_world_position"] = [round_value(dap_x, 5), round_value(dap_y, 5)]
-
-            if bif_height is not None:
-                entry["biffurcation_height"] = round_value(bif_height, 5)
-
-            trunks.append(entry)
-
-    return trunks
+def tick_step(span):
+    """Choose a readable metric grid step (1, 2, or 5 times a power of ten)."""
+    target = span / 8
+    power = 10 ** math.floor(math.log10(target))
+    for multiplier in (1, 2, 5, 10):
+        step = multiplier * power
+        if step >= target:
+            return step
 
 
-def build_bushes(instances):
-    bushes = []
+def svg_for(payload):
+    """Draw the same top-down vegetation map style as the existing forest SVG."""
+    width, height = 880, 800
+    left, top, plot_width, plot_height = 100, 60, 720, 640
+    limits = payload['limits']
+    x_min, x_max = limits['x_min'], limits['x_max']
+    y_min, y_max = limits['y_min'], limits['y_max']
+    if x_min >= x_max or y_min >= y_max:
+        raise ValueError('Invalid GT limits for SVG')
 
-    for bush_id, instance in enumerate(instances, start=1):
-        obj_x, obj_y, obj_z = instance["obj_position"]
-        bushes.append(
-            {
-                "bush_id": bush_id,
-                "name": instance["name"],
-                "source_model": instance["base_model"],
-                "obj_position": [
-                    round_value(obj_x, 5),
-                    round_value(obj_y, 5),
-                    round_value(obj_z, 5),
-                ],
-            }
-        )
+    def point(x, y):
+        return (left + (x - x_min) * plot_width / (x_max - x_min),
+                top + (y_max - y) * plot_height / (y_max - y_min))
 
-    return bushes
+    lines = [
+        f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+        f'  <rect width="{width}" height="{height}" fill="#fcfcf8"/>',
+        f'  <text x="100" y="36" font-size="24" font-family="Arial" fill="#222">{escape(str(payload["world_name"]))} Ground Truth</text>',
+        '  <text x="100" y="58" font-size="14" font-family="Arial" fill="#555">Trees and bushes extracted from the Gazebo world file</text>',
+        f'  <rect x="{left}" y="{top}" width="{plot_width}" height="{plot_height}" fill="#f7faf7" stroke="#b9c7b9" stroke-width="1.5"/>',
+    ]
 
+    for axis, low, high in (('x', x_min, x_max), ('y', y_min, y_max)):
+        step = tick_step(high - low)
+        start = math.ceil(low / step)
+        end = math.floor(high / step)
+        for index in range(start, end + 1):
+            value = index * step
+            label = f'{value:g}'
+            if axis == 'x':
+                pixel, _ = point(value, y_min)
+                lines.append(f'  <line x1="{pixel:.2f}" y1="{top}" x2="{pixel:.2f}" y2="{top + plot_height}" stroke="#d9dfd9" stroke-width="1"/>')
+                lines.append(f'  <text x="{pixel:.2f}" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">{label}</text>')
+            else:
+                _, pixel = point(x_min, value)
+                lines.append(f'  <line x1="{left}" y1="{pixel:.2f}" x2="{left + plot_width}" y2="{pixel:.2f}" stroke="#d9dfd9" stroke-width="1"/>')
+                lines.append(f'  <text x="82" y="{pixel + 4:.2f}" font-size="12" font-family="Arial" fill="#444" text-anchor="end">{label}</text>')
 
-def compute_limits(*collections):
-    positions = []
-    for collection in collections:
-        for item in collection:
-            positions.append(item["obj_position"])
+    if x_min <= 0 <= x_max:
+        zero_x, _ = point(0, y_min)
+        lines.append(f'  <line x1="{zero_x:.2f}" y1="{top}" x2="{zero_x:.2f}" y2="{top + plot_height}" stroke="#8f9d8f" stroke-width="2"/>')
+    if y_min <= 0 <= y_max:
+        _, zero_y = point(x_min, 0)
+        lines.append(f'  <line x1="{left}" y1="{zero_y:.2f}" x2="{left + plot_width}" y2="{zero_y:.2f}" stroke="#8f9d8f" stroke-width="2"/>')
 
-    xs = [position[0] for position in positions]
-    ys = [position[1] for position in positions]
-    return {
-        "x_min": math.floor(min(xs) - 1.0),
-        "x_max": math.ceil(max(xs) + 1.0),
-        "y_min": math.floor(min(ys) - 1.0),
-        "y_max": math.ceil(max(ys) + 1.0),
-    }
+    lines += [
+        '  <text x="460" y="770" font-size="16" font-family="Arial" fill="#333" text-anchor="middle">X (m)</text>',
+        '  <text x="28" y="380" font-size="16" font-family="Arial" fill="#333" text-anchor="middle" transform="rotate(-90 28 380)">Y (m)</text>',
+    ]
 
+    for tree in payload['trunks']:
+        x, y = tree.get('dbh_world_position', tree['obj_position'])[:2]
+        pixel_x, pixel_y = point(x, y)
+        title = escape(f'{tree["name"]} | tree {tree["tree_id"]} | ({x:g}, {y:g}) m')
+        lines.append(f'  <circle cx="{pixel_x:.2f}" cy="{pixel_y:.2f}" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>{title}</title></circle>')
+    for bush in payload['bushes']:
+        x, y = bush['obj_position'][:2]
+        pixel_x, pixel_y = point(x, y)
+        title = escape(f'{bush["name"]} | bush {bush["bush_id"]} | ({x:g}, {y:g}) m')
+        lines.append(f'  <rect x="{pixel_x - 6:.2f}" y="{pixel_y - 6:.2f}" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"><title>{title}</title></rect>')
 
-def build_payload(dataset_name, trunks, bushes):
-    return {
-        "world_name": dataset_name,
-        "limits": compute_limits(trunks, bushes),
-        "trunks": trunks,
-        "bushes": bushes,
-    }
+    tree_count = len({tree['tree_id'] for tree in payload['trunks']})
+    bush_count = len(payload['bushes'])
+    if not tree_count and not bush_count:
+        lines.append('  <text x="460" y="380" font-size="18" font-family="Arial" fill="#666" text-anchor="middle">No trees or bushes in this world</text>')
+    lines += [
+        '  <rect x="620" y="84" width="180" height="78" rx="8" fill="#ffffff" stroke="#cfd7cf"/>',
+        '  <circle cx="642" cy="108" r="7" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"/>',
+        '  <text x="658" y="113" font-size="14" font-family="Arial" fill="#333">Tree</text>',
+        '  <rect x="635" y="127" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"/>',
+        '  <text x="658" y="138" font-size="14" font-family="Arial" fill="#333">Bush</text>',
+        f'  <text x="635" y="154" font-size="12" font-family="Arial" fill="#666">{tree_count} trees, {bush_count} bushes</text>',
+        '</svg>',
+    ]
+    return '\n'.join(lines) + '\n'
 
 
 def main():
-    args = parse_args()
-    repo_root = Path(__file__).resolve().parent.parent
-    world_filename = args.world_name if args.world_name.endswith(".world") else f"{args.world_name}.world"
-    dataset_name = Path(world_filename).stem
-    world_path = repo_root / args.worlds_dir / world_filename
-    models_path = repo_root / args.models_path
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('world_name',nargs='?',help='Name with or without .world')
+    parser.add_argument('--all',action='store_true',help='Generate JSON and SVG for every .world file')
+    parser.add_argument('--package-root',type=pathlib.Path,default=pathlib.Path(__file__).resolve().parents[1])
+    parser.add_argument('--output-root',type=pathlib.Path)
+    parser.add_argument('--print-only',action='store_true')
+    args=parser.parse_args()
+    if args.all == bool(args.world_name):
+        parser.error('Specify one world name or --all')
+    if args.all and args.print_only:
+        parser.error('--print-only requires one world name')
+    root=args.package_root.resolve()
+    worlds=sorted((root/'worlds').glob('*.world')) if args.all else [root/'worlds'/f'{pathlib.Path(args.world_name).stem}.world']
+    if not worlds:parser.error('No .world files found')
+    catalog=load_catalog(root/'models/models.json')
+    for world in worlds:
+        payload=generate(world,catalog)
+        if args.print_only:
+            print(json.dumps(payload,ensure_ascii=False,indent=2));return
+        out_dir=(args.output_root or root)/'ground_truth'/world.stem
+        out_dir.mkdir(parents=True,exist_ok=True)
+        json_path=out_dir/'ground_truth.json'
+        svg_path=out_dir/f'{world.stem}_ground_truth.svg'
+        json_path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        svg_path.write_text(svg_for(payload),encoding='utf-8')
+        print(f'{world.name}: {len(payload["trunks"])} trunks, {len(payload["bushes"])} bushes, {len(payload["misc"])} misc -> {json_path}, {svg_path}')
 
-    if not world_path.exists():
-        raise FileNotFoundError(f"World file not found: {world_path}")
-    if not models_path.exists():
-        raise FileNotFoundError(f"Models file not found: {models_path}")
-
-    models_catalog = load_models_catalog(models_path)
-    tree_instances, bush_instances = read_instances(world_path)
-    trunks = build_trees(tree_instances, models_catalog)
-    bushes = build_bushes(bush_instances)
-
-    payload = build_payload(dataset_name, trunks, bushes)
-    json_text = json.dumps(payload, ensure_ascii=True, indent=2) + "\n"
-
-    if args.print_only:
-        print(json_text, end="")
-        return
-
-    out_dir = repo_root / args.ground_truth_dir / dataset_name
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / "ground_truth.json"
-    out_path.write_text(json_text, encoding="utf-8")
-    print(out_path)
-
-
-if __name__ == "__main__":
-    main()
+if __name__=='__main__':main()

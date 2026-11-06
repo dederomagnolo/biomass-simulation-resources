@@ -1,0 +1,284 @@
+[
+  {
+    "source_model": "eucalyptus_01",
+    "type": "tree",
+    "height": 18.0,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "mesh_dbh_position": [
+          0.00251201,
+          -0.00081
+        ],
+        "dbh": 0.18
+      }
+    ]
+  },
+  {
+    "source_model": "eucalyptus_02",
+    "type": "tree",
+    "height": 22.0,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "mesh_dbh_position": [
+          0.00205528,
+          -0.00066273
+        ],
+        "dbh": 0.22
+      }
+    ]
+  },
+  {
+    "source_model": "eucalyptus_03",
+    "type": "tree",
+    "height": 26.0,
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "mesh_dbh_position": [
+          0.00173908,
+          -0.00056077
+        ],
+        "dbh": 0.28
+      }
+    ]
+  },
+  {
+    "source_model": "forest-gen-models/bush_0",
+    "type": "bush"
+  },
+  {
+    "source_model": "bush_0",
+    "type": "bush",
+    "alias_of": "forest-gen-models/bush_0"
+  },
+  {
+    "source_model": "forest-gen-models/bush_1",
+    "type": "bush"
+  },
+  {
+    "source_model": "bush_1",
+    "type": "bush",
+    "alias_of": "forest-gen-models/bush_1"
+  },
+  {
+    "source_model": "forest-gen-models/bush_2",
+    "type": "bush"
+  },
+  {
+    "source_model": "bush_2",
+    "type": "bush",
+    "alias_of": "forest-gen-models/bush_2"
+  },
+  {
+    "source_model": "forest-gen-models/bush_3",
+    "type": "bush"
+  },
+  {
+    "source_model": "bush_3",
+    "type": "bush",
+    "alias_of": "forest-gen-models/bush_3"
+  },
+  {
+    "source_model": "forest-gen-models/bush_4",
+    "type": "bush"
+  },
+  {
+    "source_model": "bush_4",
+    "type": "bush",
+    "alias_of": "forest-gen-models/bush_4"
+  },
+  {
+    "source_model": "forest-gen-models/bush_5",
+    "type": "bush"
+  },
+  {
+    "source_model": "bush_5",
+    "type": "bush",
+    "alias_of": "forest-gen-models/bush_5"
+  },
+  {
+    "source_model": "forest-gen-models/tree_1",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_1",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_1"
+  },
+  {
+    "source_model": "forest-gen-models/tree_2",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_2",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_2"
+  },
+  {
+    "source_model": "forest-gen-models/tree_3",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_3",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_3"
+  },
+  {
+    "source_model": "forest-gen-models/tree_4",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_4",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_4"
+  },
+  {
+    "source_model": "forest-gen-models/tree_5",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_5",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_5"
+  },
+  {
+    "source_model": "forest-gen-models/tree_6",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_6",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_6"
+  },
+  {
+    "source_model": "forest-gen-models/tree_7",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_7",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_7"
+  },
+  {
+    "source_model": "forest-gen-models/tree_9",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_9",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_9"
+  },
+  {
+    "source_model": "forest-gen-models/tree_simple",
+    "type": "tree"
+  },
+  {
+    "source_model": "tree_simple",
+    "type": "tree",
+    "alias_of": "forest-gen-models/tree_simple"
+  },
+  {
+    "source_model": "new_shrub_2",
+    "type": "bush"
+  },
+  {
+    "source_model": "new_shrub_3",
+    "type": "bush"
+  },
+  {
+    "source_model": "new_shrub_4",
+    "type": "bush"
+  },
+  {
+    "source_model": "new_shrub_5",
+    "type": "bush"
+  },
+  {
+    "source_model": "new_shrub_6",
+    "type": "bush"
+  },
+  {
+    "source_model": "new_tree_1",
+    "type": "tree",
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "mesh_dbh_position": [
+          0.02996,
+          -0.5328
+        ],
+        "dbh": 0.43103
+      }
+    ],
+    "biffurcation_height": 2.67
+  },
+  {
+    "source_model": "new_tree_2",
+    "type": "tree",
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "mesh_dbh_position": [
+          0.43162,
+          -0.00487
+        ],
+        "dbh": 0.44013
+      }
+    ]
+  },
+  {
+    "source_model": "new_tree_3",
+    "type": "tree"
+  },
+  {
+    "source_model": "new_tree_4",
+    "type": "tree",
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "mesh_dbh_position": [
+          0.03458,
+          -0.01433
+        ],
+        "dbh": 0.09472
+      },
+      {
+        "trunk_id": 2,
+        "mesh_dbh_position": [
+          0.03547,
+          0.16465
+        ],
+        "dbh": 0.09759
+      }
+    ]
+  },
+  {
+    "source_model": "new_tree_8",
+    "type": "tree",
+    "trunks": [
+      {
+        "trunk_id": 1,
+        "mesh_dbh_position": [
+          -0.22488,
+          0.01799
+        ],
+        "dbh": 0.18884
+      }
+    ],
+    "biffurcation_height": 1.17
+  },
+  {
+    "source_model": "tree_simple_thick",
+    "type": "tree"
+  },
+  {
+    "source_model": "world_jean_ground",
+    "type": "object"
+  },
+  {
+    "source_model": "world_jean_tree",
+    "type": "tree"
+  }
+]

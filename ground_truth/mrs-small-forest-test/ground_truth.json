@@ -1,0 +1,81 @@
+{
+  "world_name": "default",
+  "limits": {
+    "x_min": 3,
+    "x_max": 13,
+    "y_min": 0,
+    "y_max": 8
+  },
+  "trunks": [
+    {
+      "tree_id": 1,
+      "name": "world_jean_tree_clone",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        4.52183,
+        3.7767,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 2,
+      "name": "world_jean_tree_clone_clone",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        6.97302,
+        1.5287,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 3,
+      "name": "world_jean_tree_clone_clone_clone",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        8.27403,
+        4.78452,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 4,
+      "name": "world_jean_tree_clone_clone_clone_0",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        4.97222,
+        6.81452,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 5,
+      "name": "world_jean_tree_clone_clone_0_clone_1_clone_1",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        11.2258,
+        1.96661,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ],
+  "bushes": [],
+  "misc": [
+    {
+      "object_id": 1,
+      "type": "object",
+      "name": "grass_plane",
+      "source_model": "mrs_gazebo_common_resources/models/grass_plane",
+      "obj_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ]
+}

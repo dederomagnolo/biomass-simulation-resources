@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="800" viewBox="0 0 880 800">
+  <rect width="880" height="800" fill="#fcfcf8"/>
+  <text x="100" y="36" font-size="24" font-family="Arial" fill="#222">world_jean Ground Truth</text>
+  <text x="100" y="58" font-size="14" font-family="Arial" fill="#555">Trees and bushes extracted from the Gazebo world file</text>
+  <rect x="100" y="60" width="720" height="640" fill="#f7faf7" stroke="#b9c7b9" stroke-width="1.5"/>
+  <line x1="100.00" y1="60" x2="100.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="100.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-6</text>
+  <line x1="220.00" y1="60" x2="220.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="220.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-4</text>
+  <line x1="340.00" y1="60" x2="340.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="340.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-2</text>
+  <line x1="460.00" y1="60" x2="460.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="460.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">0</text>
+  <line x1="580.00" y1="60" x2="580.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="580.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">2</text>
+  <line x1="700.00" y1="60" x2="700.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="700.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">4</text>
+  <line x1="820.00" y1="60" x2="820.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="820.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">6</text>
+  <line x1="100" y1="700.00" x2="820" y2="700.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="704.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-6</text>
+  <line x1="100" y1="593.33" x2="820" y2="593.33" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="597.33" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-4</text>
+  <line x1="100" y1="486.67" x2="820" y2="486.67" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="490.67" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-2</text>
+  <line x1="100" y1="380.00" x2="820" y2="380.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="384.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">0</text>
+  <line x1="100" y1="273.33" x2="820" y2="273.33" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="277.33" font-size="12" font-family="Arial" fill="#444" text-anchor="end">2</text>
+  <line x1="100" y1="166.67" x2="820" y2="166.67" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="170.67" font-size="12" font-family="Arial" fill="#444" text-anchor="end">4</text>
+  <line x1="100" y1="60.00" x2="820" y2="60.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="64.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">6</text>
+  <line x1="460.00" y1="60" x2="460.00" y2="700" stroke="#8f9d8f" stroke-width="2"/>
+  <line x1="100" y1="380.00" x2="820" y2="380.00" stroke="#8f9d8f" stroke-width="2"/>
+  <text x="460" y="770" font-size="16" font-family="Arial" fill="#333" text-anchor="middle">X (m)</text>
+  <text x="28" y="380" font-size="16" font-family="Arial" fill="#333" text-anchor="middle" transform="rotate(-90 28 380)">Y (m)</text>
+  <circle cx="579.17" cy="358.41" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_001 | tree 1 | (1.98624, 0.404763) m</title></circle>
+  <circle cx="460.00" cy="380.00" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_002 | tree 2 | (0, 0) m</title></circle>
+  <circle cx="320.74" cy="126.70" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_003 | tree 3 | (-2.32104, 4.74936) m</title></circle>
+  <circle cx="505.26" cy="418.63" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_004 | tree 4 | (0.754366, -0.724326) m</title></circle>
+  <circle cx="475.46" cy="538.04" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_005 | tree 5 | (0.257643, -2.96332) m</title></circle>
+  <circle cx="225.08" cy="631.18" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_006 | tree 6 | (-3.91537, -4.70962) m</title></circle>
+  <circle cx="198.94" cy="618.68" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_007 | tree 7 | (-4.35099, -4.47534) m</title></circle>
+  <circle cx="461.64" cy="520.45" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_008 | tree 8 | (0.027284, -2.63339) m</title></circle>
+  <circle cx="334.53" cy="429.27" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_009 | tree 9 | (-2.09123, -0.923786) m</title></circle>
+  <circle cx="317.28" cy="277.87" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_010 | tree 10 | (-2.37871, 1.91497) m</title></circle>
+  <circle cx="391.41" cy="175.10" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_011 | tree 11 | (-1.14314, 3.84188) m</title></circle>
+  <circle cx="276.23" cy="294.39" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_012 | tree 12 | (-3.0628, 1.60522) m</title></circle>
+  <circle cx="741.11" cy="217.93" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_013 | tree 13 | (4.68516, 3.03878) m</title></circle>
+  <circle cx="385.70" cy="265.61" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_014 | tree 14 | (-1.23828, 2.14476) m</title></circle>
+  <circle cx="673.40" cy="308.12" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_015 | tree 15 | (3.55672, 1.34769) m</title></circle>
+  <circle cx="654.82" cy="494.67" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_016 | tree 16 | (3.247, -2.14999) m</title></circle>
+  <circle cx="591.55" cy="586.95" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_017 | tree 17 | (2.19253, -3.88026) m</title></circle>
+  <circle cx="643.06" cy="368.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_018 | tree 18 | (3.05098, 0.223972) m</title></circle>
+  <circle cx="420.04" cy="575.20" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_019 | tree 19 | (-0.665921, -3.66006) m</title></circle>
+  <circle cx="351.63" cy="484.44" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_020 | tree 20 | (-1.80608, -1.95829) m</title></circle>
+  <rect x="620" y="84" width="180" height="78" rx="8" fill="#ffffff" stroke="#cfd7cf"/>
+  <circle cx="642" cy="108" r="7" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"/>
+  <text x="658" y="113" font-size="14" font-family="Arial" fill="#333">Tree</text>
+  <rect x="635" y="127" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"/>
+  <text x="658" y="138" font-size="14" font-family="Arial" fill="#333">Bush</text>
+  <text x="635" y="154" font-size="12" font-family="Arial" fill="#666">20 trees, 0 bushes</text>
+</svg>

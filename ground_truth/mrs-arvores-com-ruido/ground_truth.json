@@ -1,0 +1,103 @@
+{
+  "world_name": "default",
+  "limits": {
+    "x_min": 0,
+    "x_max": 11,
+    "y_min": 1,
+    "y_max": 7
+  },
+  "trunks": [
+    {
+      "tree_id": 1,
+      "name": "new_tree_1",
+      "source_model": "new_tree_1",
+      "obj_position": [
+        2.25085,
+        4.30697,
+        0.0
+      ],
+      "yaw": 0.0,
+      "mesh_dbh_position": [
+        0.02996,
+        -0.5328
+      ],
+      "dbh_world_position": [
+        2.28081,
+        3.77417
+      ],
+      "dbh": 0.43103,
+      "biffurcation_height": 2.67
+    },
+    {
+      "tree_id": 2,
+      "name": "world_jean_tree",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        8.26453,
+        5.04667,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ],
+  "bushes": [
+    {
+      "bush_id": 1,
+      "name": "new_shrub_3",
+      "source_model": "new_shrub_3",
+      "obj_position": [
+        2.67837,
+        2.945,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 2,
+      "name": "new_shrub_3_clone",
+      "source_model": "new_shrub_3",
+      "obj_position": [
+        1.77273,
+        3.51533,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 3,
+      "name": "new_shrub_2",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        7.83424,
+        4.64097,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 4,
+      "name": "new_shrub_2_clone",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        9.90163,
+        3.61482,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ],
+  "misc": [
+    {
+      "object_id": 1,
+      "type": "object",
+      "name": "grass_plane",
+      "source_model": "mrs_gazebo_common_resources/models/grass_plane",
+      "obj_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ]
+}
