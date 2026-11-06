@@ -1,0 +1,455 @@
+{
+  "world_name": "default",
+  "limits": {
+    "x_min": -17,
+    "x_max": 16,
+    "y_min": -17,
+    "y_max": 17
+  },
+  "trunks": [
+    {
+      "tree_id": 1,
+      "name": "tree_random_001",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        1.371,
+        -8.553,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 2,
+      "name": "tree_random_003",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -8.596,
+        15.2,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 3,
+      "name": "tree_random_005",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        8.373,
+        3.433,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 4,
+      "name": "tree_random_008",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -1.34,
+        -12.183,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 5,
+      "name": "tree_random_009",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        5.802,
+        14.455,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 6,
+      "name": "tree_random_012",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        8.996,
+        -11.266,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 7,
+      "name": "tree_random_013",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -8.067,
+        -6.706,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 8,
+      "name": "tree_random_016",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -4.265,
+        -3.546,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 9,
+      "name": "tree_random_017",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        10.565,
+        5.539,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 10,
+      "name": "tree_random_018",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        10.284,
+        0.448,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 11,
+      "name": "tree_random_021",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        10.637,
+        -15.211,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 12,
+      "name": "tree_random_022",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        6.308,
+        -2.017,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 13,
+      "name": "tree_random_023",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -15.018,
+        -2.805,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 14,
+      "name": "tree_random_026",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        6.911,
+        10.141,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 15,
+      "name": "tree_random_028",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -10.042,
+        3.196,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 16,
+      "name": "tree_random_029",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -2.228,
+        10.173,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 17,
+      "name": "tree_random_031",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -11.992,
+        -3.903,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 18,
+      "name": "tree_random_032",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -0.331,
+        5.701,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 19,
+      "name": "tree_random_036",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        14.115,
+        0.854,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 20,
+      "name": "tree_random_038",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -3.591,
+        -7.449,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 21,
+      "name": "tree_random_039",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        1.586,
+        8.952,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 22,
+      "name": "tree_random_040",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        11.217,
+        -6.34,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 23,
+      "name": "tree_random_045",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        5.275,
+        6.465,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 24,
+      "name": "tree_random_046",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -10.759,
+        6.246,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 25,
+      "name": "tree_random_048",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        3.221,
+        -15.687,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 26,
+      "name": "tree_random_051",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -7.861,
+        -3.042,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 27,
+      "name": "tree_random_055",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        1.087,
+        12.91,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 28,
+      "name": "tree_random_059",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        13.154,
+        10.742,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 29,
+      "name": "tree_random_060",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -4.852,
+        -15.604,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 30,
+      "name": "tree_random_064",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -14.586,
+        12.845,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 31,
+      "name": "tree_random_066",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -6.878,
+        6.077,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 32,
+      "name": "tree_random_068",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        8.217,
+        -7.31,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 33,
+      "name": "tree_random_069",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        13.698,
+        4.115,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 34,
+      "name": "tree_random_071",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        4.744,
+        2.129,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 35,
+      "name": "tree_random_074",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        11.433,
+        -2.705,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 36,
+      "name": "tree_random_075",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -13.713,
+        1.922,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 37,
+      "name": "tree_random_077",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -12.291,
+        10.323,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 38,
+      "name": "tree_random_078",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -6.778,
+        -11.087,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 39,
+      "name": "tree_random_079",
+      "source_model": "tree_simple_thick",
+      "obj_position": [
+        -14.213,
+        -7.708,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ],
+  "bushes": [],
+  "misc": [
+    {
+      "object_id": 1,
+      "type": "object",
+      "name": "grass_plane",
+      "source_model": "mrs_gazebo_common_resources/models/grass_plane",
+      "obj_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ]
+}

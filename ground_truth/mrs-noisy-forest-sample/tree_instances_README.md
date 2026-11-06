@@ -1,8 +1,7 @@
 # tree_instances.json
 
 Ground-truth per-trunk data for the **mrs-noisy-forest-sample** scene.
-Complements `mrs-noisy-forest-sample_ground_truth.csv`, which only contains
-one (x, y) position per tree instance (the model origin). This file adds
+Complements `ground_truth.json`, which contains the current ground-truth schema. This historical file adds
 individual trunk positions and diameters extracted from the 3-D mesh of each
 tree model.
 
@@ -18,10 +17,10 @@ Each key (`"T1"` … `"T8"`) identifies a **tree instance** in the scene.
 
 | Field | Type | Description |
 |---|---|---|
-| `tree_id` | int | Numeric ID matching the CSV ground-truth file |
+| `tree_id` | int | Numeric ID matching the ground-truth JSON |
 | `model_name` | string | Name of the Gazebo/SDF instance (unique per scene) |
 | `base_model` | string | Name of the source 3-D model shared by clones |
-| `instance_world_x/y` | float | World-frame origin of the model as placed in Gazebo (metres) — this is what the CSV stores |
+| `instance_world_x/y` | float | World-frame origin of the model as placed in Gazebo (metres) |
 | `n_trunks` | int | Number of distinct trunks (1 for single-stem, 2 for bifurcated) |
 | `bifurcated` | bool | True if the tree splits into 2 stems above the base |
 | `bifurcation_height_m` | float \| null | Height at which the split occurs (metres above ground) |
@@ -33,11 +32,11 @@ Each key (`"T1"` … `"T8"`) identifies a **tree instance** in the scene.
 | Field | Type | Description |
 |---|---|---|
 | `trunk_id` | int | 1-indexed within the instance |
-| `dap_cm` | float | **DAP** — Diameter at Breast Height (1.3 m). Standard forestry measurement (cm) |
+| `dbh_cm` | float | **DBH** — Diameter at Breast Height (1.3 m). Standard forestry measurement (cm) |
 | `world_x/y` | float | World-frame centre of this trunk at DBH height (metres). Use this for detector evaluation |
 | `model_local_x/y` | float | Same centre expressed as offset from the model origin (`world = instance_world + model_local`) |
 
-> **Note:** DAP height is always 1.3 m (standard); it is not stored in the JSON
+> **Note:** DBH height is always 1.3 m (standard); it is not stored in this JSON
 > to avoid redundancy.
 
 ---
@@ -47,7 +46,7 @@ Each key (`"T1"` … `"T8"`) identifies a **tree instance** in the scene.
 ### 1. Instance origin positions
 
 `instance_world_x/y` were read directly from the Gazebo world file
-(`.world` / SDF). These match the coordinates in the CSV ground-truth file.
+(`.world` / SDF). These match the model origins in `ground_truth.json`.
 
 ### 2. OBJ mesh analysis — coordinate systems
 
@@ -70,7 +69,7 @@ For each model, all OBJ vertices were loaded in Python (`numpy`).
 
 **Step A — horizontal slicing.**
 A thin slab of vertices was taken at the target height (0.1 m for base
-diameter, 1.3 m for DAP). Slab thickness: ±0.05 m.
+diameter, 1.3 m for DBH). Slab thickness: ±0.05 m.
 
 **Step B — DBSCAN clustering.**
 DBSCAN (eps ≈ 0.15 m, min_samples = 5) was applied to the XY coordinates

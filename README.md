@@ -18,10 +18,13 @@ The goal is to provide reusable, research-oriented models and worlds that better
 ## What this package provides
 
 - `models/`: main model library
+- `models/models.json`: model classifications and optional trunk measurements used by the ground-truth generator
 - `models/forest-gen-models/`: additional forest assets, originally from [kubja/gazebo-vegetation](https://github.com/kubja/gazebo-vegetation)
 - `worlds/`: Gazebo world files
+- `ground_truth/<world-name>/ground_truth.json` and `<world-name>_ground_truth.svg`: generated data and top-down map for each world
+- `utils/generate_ground_truth_json.py`: generate JSON and SVG from a world and the model catalog
 - `worlds/world_template.world`: empty template to create new worlds
-- `run-world`: generic bash entrypoint to open worlds in Gazebo Classic
+- `run-world.sh`: generic bash entrypoint to open worlds in Gazebo Classic
 
 ## Running from repository root (ROS Noetic)
 
@@ -60,7 +63,7 @@ rosrun biomass_simulation_resources run-world.sh world_template.world
 rosrun biomass_simulation_resources run-world.sh /absolute/path/to/world_jean.world
 ```
 
-`run-world` automatically configures `GAZEBO_MODEL_PATH` and `GAZEBO_RESOURCE_PATH`.
+`run-world.sh` automatically configures `GAZEBO_MODEL_PATH` and `GAZEBO_RESOURCE_PATH`.
 
 ## Launch files
 
@@ -77,6 +80,14 @@ roslaunch biomass_simulation_resources view_world.launch \
   world_file:=$(rospack find biomass_simulation_resources)/worlds/world_template.world
 ```
 
+## Add a new model
+
+1. Place the asset under `models/<model-name>/` with a valid `model.config`, `model.sdf`, and referenced meshes or textures. Keep geometry in meters and check its local origin.
+2. Add an entry to `models/models.json` with `source_model` matching the identifier after `model://` and `type` set to `tree`, `bush`, or `object`. Add measured trunk data only when available.
+3. Add the model to a world and regenerate its ground truth. Review `misc`: an uncataloged model is classified as `object`.
+
+The catalog is the source of classification. Adding a model folder does not register it automatically. See [the ground-truth guide](docs/GROUND_TRUTH.md) for the schema, units, and pose transformation.
+
 ## Create a new world
 
 1. Copy the template:
@@ -85,8 +96,19 @@ roslaunch biomass_simulation_resources view_world.launch \
 cp worlds/world_template.world worlds/my_new_world.world
 ```
 
-2. Edit `worlds/my_new_world.world` and add your `model://...` includes.
-3. Run it:
+2. Edit `worlds/my_new_world.world`: set a unique world name, give every instance a unique name, and add models with `<include>` and `<pose>x y z roll pitch yaw</pose>` (meters and radians). Embedded `<model>` elements are supported too.
+3. Register new models in `models/models.json`, then generate and inspect the ground truth:
+
+```bash
+python3 utils/generate_ground_truth_json.py my_new_world --print-only
+python3 utils/generate_ground_truth_json.py my_new_world
+# Refresh every world:
+python3 utils/generate_ground_truth_json.py --all
+```
+
+The outputs are `ground_truth/my_new_world/ground_truth.json` and `ground_truth/my_new_world/my_new_world_ground_truth.svg`. Check `trunks`, `bushes`, and `misc` against the world file.
+
+4. Build/source the package as above, then run it:
 
 ```bash
 rosrun biomass_simulation_resources run-world.sh my_new_world

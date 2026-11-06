@@ -1,101 +1,83 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
-<rect x="0" y="0" width="1400" height="980" fill="#f9fbfd"/>
-<text x="90.0" y="36" font-size="24" font-weight="bold" fill="#1f1f1f">forest_small_random_10min Ground Truth</text>
-<text x="90.0" y="56" font-size="14" fill="#4c5560">Total trees: 39</text>
-<rect x="90.0" y="65.0" width="1285.0" height="840.0" fill="none" stroke="#b8c2cc" stroke-width="1.4"/>
-<line x1="330.9375" y1="65.0" x2="330.9375" y2="905.0" stroke="#e0e7ee" stroke-width="1"/>
-<text x="330.9375" y="927.0" font-size="12" fill="#66717c" text-anchor="middle">-10.0</text>
-<line x1="732.5" y1="65.0" x2="732.5" y2="905.0" stroke="#e0e7ee" stroke-width="1"/>
-<text x="732.5" y="927.0" font-size="12" fill="#66717c" text-anchor="middle">0.0</text>
-<line x1="1134.0625" y1="65.0" x2="1134.0625" y2="905.0" stroke="#e0e7ee" stroke-width="1"/>
-<text x="1134.0625" y="927.0" font-size="12" fill="#66717c" text-anchor="middle">10.0</text>
-<line x1="90.0" y1="747.5" x2="1375.0" y2="747.5" stroke="#e0e7ee" stroke-width="1"/>
-<text x="82.0" y="751.5" font-size="12" fill="#66717c" text-anchor="end">-10.0</text>
-<line x1="90.0" y1="485.0" x2="1375.0" y2="485.0" stroke="#e0e7ee" stroke-width="1"/>
-<text x="82.0" y="489.0" font-size="12" fill="#66717c" text-anchor="end">0.0</text>
-<line x1="90.0" y1="222.5" x2="1375.0" y2="222.5" stroke="#e0e7ee" stroke-width="1"/>
-<text x="82.0" y="226.5" font-size="12" fill="#66717c" text-anchor="end">10.0</text>
-<line x1="732.5" y1="65.0" x2="732.5" y2="905.0" stroke="#707b86" stroke-width="1.3"/>
-<line x1="90.0" y1="485.0" x2="1375.0" y2="485.0" stroke="#707b86" stroke-width="1.3"/>
-<circle cx="787.5542187499999" cy="709.51625" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="795.5542187499999" y="701.51625" font-size="11.5" fill="#153b1e">1 (1.37,-8.55)</text>
-<circle cx="387.316875" cy="86.00000000000001" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="395.316875" y="78.00000000000001" font-size="11.5" fill="#153b1e">3 (-8.60,15.20)</text>
-<circle cx="1068.7282812499998" cy="394.88375" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1076.7282812499998" y="386.88375" font-size="11.5" fill="#153b1e">5 (8.37,3.43)</text>
-<circle cx="678.690625" cy="804.80375" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="686.690625" y="796.80375" font-size="11.5" fill="#153b1e">8 (-1.34,-12.18)</text>
-<circle cx="965.4865625" cy="105.55625000000005" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="973.4865625" y="97.55625000000005" font-size="11.5" fill="#153b1e">9 (5.80,14.46)</text>
-<circle cx="1093.745625" cy="780.7325" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1101.745625" y="772.7325" font-size="11.5" fill="#153b1e">12 (9.00,-11.27)</text>
-<circle cx="408.55953125" cy="661.0325" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="416.55953125" y="653.0325" font-size="11.5" fill="#153b1e">13 (-8.07,-6.71)</text>
-<circle cx="561.23359375" cy="578.0825" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="569.23359375" y="570.0825" font-size="11.5" fill="#153b1e">16 (-4.26,-3.55)</text>
-<circle cx="1156.7507812499998" cy="339.60124999999994" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1164.7507812499998" y="331.60124999999994" font-size="11.5" fill="#153b1e">17 (10.56,5.54)</text>
-<circle cx="1145.4668749999998" cy="473.24" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1153.4668749999998" y="465.24" font-size="11.5" fill="#153b1e">18 (10.28,0.45)</text>
-<circle cx="1159.64203125" cy="884.2887499999999" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1167.64203125" y="876.2887499999999" font-size="11.5" fill="#153b1e">21 (10.64,-15.21)</text>
-<circle cx="985.805625" cy="537.94625" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="993.805625" y="529.94625" font-size="11.5" fill="#153b1e">22 (6.31,-2.02)</text>
-<circle cx="129.43343749999997" cy="558.6312499999999" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="137.43343749999997" y="550.6312499999999" font-size="11.5" fill="#153b1e">23 (-15.02,-2.81)</text>
-<circle cx="1010.0198437500001" cy="218.79875000000004" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1018.0198437500001" y="210.79875000000004" font-size="11.5" fill="#153b1e">26 (6.91,10.14)</text>
-<circle cx="329.2509375" cy="401.10499999999996" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="337.2509375" y="393.10499999999996" font-size="11.5" fill="#153b1e">28 (-10.04,3.20)</text>
-<circle cx="643.031875" cy="217.95874999999995" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="651.031875" y="209.95874999999995" font-size="11.5" fill="#153b1e">29 (-2.23,10.17)</text>
-<circle cx="250.94624999999996" cy="587.45375" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="258.94624999999996" y="579.45375" font-size="11.5" fill="#153b1e">31 (-11.99,-3.90)</text>
-<circle cx="719.20828125" cy="335.34875" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="727.20828125" y="327.34875" font-size="11.5" fill="#153b1e">32 (-0.33,5.70)</text>
-<circle cx="1299.30546875" cy="462.58250000000004" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1307.30546875" y="454.58250000000004" font-size="11.5" fill="#153b1e">36 (14.12,0.85)</text>
-<circle cx="588.29890625" cy="680.53625" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="596.29890625" y="672.53625" font-size="11.5" fill="#153b1e">38 (-3.59,-7.45)</text>
-<circle cx="796.1878125" cy="250.01000000000005" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="804.1878125" y="242.01000000000005" font-size="11.5" fill="#153b1e">39 (1.59,8.95)</text>
-<circle cx="1182.93265625" cy="651.425" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1190.93265625" y="643.425" font-size="11.5" fill="#153b1e">40 (11.22,-6.34)</text>
-<circle cx="944.3242187499999" cy="315.29375000000005" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="952.3242187499999" y="307.29375000000005" font-size="11.5" fill="#153b1e">45 (5.28,6.46)</text>
-<circle cx="300.45890625" cy="321.04249999999996" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="308.45890625" y="313.04249999999996" font-size="11.5" fill="#153b1e">46 (-10.76,6.25)</text>
-<circle cx="861.84328125" cy="896.7837499999999" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="869.84328125" y="888.7837499999999" font-size="11.5" fill="#153b1e">48 (3.22,-15.69)</text>
-<circle cx="416.83171875" cy="564.8525" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="424.83171875" y="556.8525" font-size="11.5" fill="#153b1e">51 (-7.86,-3.04)</text>
-<circle cx="776.14984375" cy="146.1125" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="784.14984375" y="138.1125" font-size="11.5" fill="#153b1e">55 (1.09,12.91)</text>
-<circle cx="1260.7153125" cy="203.02249999999998" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1268.7153125" y="195.02249999999998" font-size="11.5" fill="#153b1e">59 (13.15,10.74)</text>
-<circle cx="537.661875" cy="894.605" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="545.661875" y="886.605" font-size="11.5" fill="#153b1e">60 (-4.85,-15.60)</text>
-<circle cx="146.7809375" cy="147.81875000000002" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="154.7809375" y="139.81875000000002" font-size="11.5" fill="#153b1e">64 (-14.59,12.85)</text>
-<circle cx="456.3053125" cy="325.47875000000005" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="464.3053125" y="317.47875000000005" font-size="11.5" fill="#153b1e">66 (-6.88,6.08)</text>
-<circle cx="1062.46390625" cy="676.8874999999999" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1070.46390625" y="668.8874999999999" font-size="11.5" fill="#153b1e">68 (8.22,-7.31)</text>
-<circle cx="1282.5603125" cy="376.98124999999993" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1290.5603125" y="368.98124999999993" font-size="11.5" fill="#153b1e">69 (13.70,4.12)</text>
-<circle cx="923.00125" cy="429.11375" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="931.00125" y="421.11375" font-size="11.5" fill="#153b1e">71 (4.74,2.13)</text>
-<circle cx="1191.60640625" cy="556.0062499999999" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="1199.60640625" y="548.0062499999999" font-size="11.5" fill="#153b1e">74 (11.43,-2.71)</text>
-<circle cx="181.83734375000003" cy="434.54749999999996" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="189.83734375000003" y="426.54749999999996" font-size="11.5" fill="#153b1e">75 (-13.71,1.92)</text>
-<circle cx="238.93953125" cy="214.02124999999998" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="246.93953125" y="206.02124999999998" font-size="11.5" fill="#153b1e">77 (-12.29,10.32)</text>
-<circle cx="460.32093750000007" cy="776.0337499999999" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="468.32093750000007" y="768.0337499999999" font-size="11.5" fill="#153b1e">78 (-6.78,-11.09)</text>
-<circle cx="161.75921875000003" cy="687.3349999999999" r="6.2" fill="#2b8a3e" stroke="#0f4c20" stroke-width="1"/>
-<text x="169.75921875000003" y="679.3349999999999" font-size="11.5" fill="#153b1e">79 (-14.21,-7.71)</text>
-<text x="716.5" y="960.0" font-size="14" fill="#3f4952">X (m)</text>
-<text x="22" y="485.0" font-size="14" fill="#3f4952">Y (m)</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="800" viewBox="0 0 880 800">
+  <rect width="880" height="800" fill="#fcfcf8"/>
+  <text x="100" y="36" font-size="24" font-family="Arial" fill="#222">default Ground Truth</text>
+  <text x="100" y="58" font-size="14" font-family="Arial" fill="#555">Trees and bushes extracted from the Gazebo world file</text>
+  <rect x="100" y="60" width="720" height="640" fill="#f7faf7" stroke="#b9c7b9" stroke-width="1.5"/>
+  <line x1="143.64" y1="60" x2="143.64" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="143.64" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-15</text>
+  <line x1="252.73" y1="60" x2="252.73" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="252.73" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-10</text>
+  <line x1="361.82" y1="60" x2="361.82" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="361.82" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-5</text>
+  <line x1="470.91" y1="60" x2="470.91" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="470.91" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">0</text>
+  <line x1="580.00" y1="60" x2="580.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="580.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">5</text>
+  <line x1="689.09" y1="60" x2="689.09" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="689.09" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">10</text>
+  <line x1="798.18" y1="60" x2="798.18" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="798.18" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">15</text>
+  <line x1="100" y1="662.35" x2="820" y2="662.35" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="666.35" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-15</text>
+  <line x1="100" y1="568.24" x2="820" y2="568.24" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="572.24" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-10</text>
+  <line x1="100" y1="474.12" x2="820" y2="474.12" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="478.12" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-5</text>
+  <line x1="100" y1="380.00" x2="820" y2="380.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="384.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">0</text>
+  <line x1="100" y1="285.88" x2="820" y2="285.88" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="289.88" font-size="12" font-family="Arial" fill="#444" text-anchor="end">5</text>
+  <line x1="100" y1="191.76" x2="820" y2="191.76" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="195.76" font-size="12" font-family="Arial" fill="#444" text-anchor="end">10</text>
+  <line x1="100" y1="97.65" x2="820" y2="97.65" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="101.65" font-size="12" font-family="Arial" fill="#444" text-anchor="end">15</text>
+  <line x1="470.91" y1="60" x2="470.91" y2="700" stroke="#8f9d8f" stroke-width="2"/>
+  <line x1="100" y1="380.00" x2="820" y2="380.00" stroke="#8f9d8f" stroke-width="2"/>
+  <text x="460" y="770" font-size="16" font-family="Arial" fill="#333" text-anchor="middle">X (m)</text>
+  <text x="28" y="380" font-size="16" font-family="Arial" fill="#333" text-anchor="middle" transform="rotate(-90 28 380)">Y (m)</text>
+  <circle cx="500.82" cy="541.00" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_001 | tree 1 | (1.371, -8.553) m</title></circle>
+  <circle cx="283.36" cy="93.88" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_003 | tree 2 | (-8.596, 15.2) m</title></circle>
+  <circle cx="653.59" cy="315.38" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_005 | tree 3 | (8.373, 3.433) m</title></circle>
+  <circle cx="441.67" cy="609.33" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_008 | tree 4 | (-1.34, -12.183) m</title></circle>
+  <circle cx="597.50" cy="107.91" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_009 | tree 5 | (5.802, 14.455) m</title></circle>
+  <circle cx="667.19" cy="592.07" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_012 | tree 6 | (8.996, -11.266) m</title></circle>
+  <circle cx="294.90" cy="506.23" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_013 | tree 7 | (-8.067, -6.706) m</title></circle>
+  <circle cx="377.85" cy="446.75" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_016 | tree 8 | (-4.265, -3.546) m</title></circle>
+  <circle cx="701.42" cy="275.74" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_017 | tree 9 | (10.565, 5.539) m</title></circle>
+  <circle cx="695.29" cy="371.57" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_018 | tree 10 | (10.284, 0.448) m</title></circle>
+  <circle cx="702.99" cy="666.32" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_021 | tree 11 | (10.637, -15.211) m</title></circle>
+  <circle cx="608.54" cy="417.97" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_022 | tree 12 | (6.308, -2.017) m</title></circle>
+  <circle cx="143.24" cy="432.80" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_023 | tree 13 | (-15.018, -2.805) m</title></circle>
+  <circle cx="621.69" cy="189.11" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_026 | tree 14 | (6.911, 10.141) m</title></circle>
+  <circle cx="251.81" cy="319.84" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_028 | tree 15 | (-10.042, 3.196) m</title></circle>
+  <circle cx="422.30" cy="188.51" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_029 | tree 16 | (-2.228, 10.173) m</title></circle>
+  <circle cx="209.27" cy="453.47" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_031 | tree 17 | (-11.992, -3.903) m</title></circle>
+  <circle cx="463.69" cy="272.69" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_032 | tree 18 | (-0.331, 5.701) m</title></circle>
+  <circle cx="778.87" cy="363.92" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_036 | tree 19 | (14.115, 0.854) m</title></circle>
+  <circle cx="392.56" cy="520.22" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_038 | tree 20 | (-3.591, -7.449) m</title></circle>
+  <circle cx="505.51" cy="211.49" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_039 | tree 21 | (1.586, 8.952) m</title></circle>
+  <circle cx="715.64" cy="499.34" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_040 | tree 22 | (11.217, -6.34) m</title></circle>
+  <circle cx="586.00" cy="258.31" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_045 | tree 23 | (5.275, 6.465) m</title></circle>
+  <circle cx="236.17" cy="262.43" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_046 | tree 24 | (-10.759, 6.246) m</title></circle>
+  <circle cx="541.19" cy="675.28" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_048 | tree 25 | (3.221, -15.687) m</title></circle>
+  <circle cx="299.40" cy="437.26" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_051 | tree 26 | (-7.861, -3.042) m</title></circle>
+  <circle cx="494.63" cy="136.99" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_055 | tree 27 | (1.087, 12.91) m</title></circle>
+  <circle cx="757.91" cy="177.80" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_059 | tree 28 | (13.154, 10.742) m</title></circle>
+  <circle cx="365.05" cy="673.72" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_060 | tree 29 | (-4.852, -15.604) m</title></circle>
+  <circle cx="152.67" cy="138.21" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_064 | tree 30 | (-14.586, 12.845) m</title></circle>
+  <circle cx="320.84" cy="265.61" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_066 | tree 31 | (-6.878, 6.077) m</title></circle>
+  <circle cx="650.19" cy="517.60" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_068 | tree 32 | (8.217, -7.31) m</title></circle>
+  <circle cx="769.77" cy="302.54" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_069 | tree 33 | (13.698, 4.115) m</title></circle>
+  <circle cx="574.41" cy="339.92" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_071 | tree 34 | (4.744, 2.129) m</title></circle>
+  <circle cx="720.36" cy="430.92" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_074 | tree 35 | (11.433, -2.705) m</title></circle>
+  <circle cx="171.72" cy="343.82" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_075 | tree 36 | (-13.713, 1.922) m</title></circle>
+  <circle cx="202.74" cy="185.68" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_077 | tree 37 | (-12.291, 10.323) m</title></circle>
+  <circle cx="323.03" cy="588.70" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_078 | tree 38 | (-6.778, -11.087) m</title></circle>
+  <circle cx="160.81" cy="525.09" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_random_079 | tree 39 | (-14.213, -7.708) m</title></circle>
+  <rect x="620" y="84" width="180" height="78" rx="8" fill="#ffffff" stroke="#cfd7cf"/>
+  <circle cx="642" cy="108" r="7" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"/>
+  <text x="658" y="113" font-size="14" font-family="Arial" fill="#333">Tree</text>
+  <rect x="635" y="127" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"/>
+  <text x="658" y="138" font-size="14" font-family="Arial" fill="#333">Bush</text>
+  <text x="635" y="154" font-size="12" font-family="Arial" fill="#666">39 trees, 0 bushes</text>
 </svg>
