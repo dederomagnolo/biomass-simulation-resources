@@ -1,0 +1,1286 @@
+{
+  "world_name": "mrs-eucalyptus_rows",
+  "limits": {
+    "x_min": -16,
+    "x_max": 16,
+    "y_min": -15,
+    "y_max": 15
+  },
+  "trunks": [
+    {
+      "tree_id": 1,
+      "name": "tree_000",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -15.0,
+        -13.5,
+        0.0
+      ],
+      "yaw": 2.007380306033519,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -15.000328,
+        -13.497381
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 2,
+      "name": "tree_001",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -15.0,
+        -10.5,
+        0.0
+      ],
+      "yaw": 4.066466075498026,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -15.001495,
+        -10.501051
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 3,
+      "name": "tree_002",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -15.0,
+        -7.5,
+        0.0
+      ],
+      "yaw": 5.555088508471962,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -14.998664,
+        -7.502276
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 4,
+      "name": "tree_003",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -15.0,
+        -4.5,
+        0.0
+      ],
+      "yaw": 3.9048997969637655,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -15.001644,
+        -4.500797
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 5,
+      "name": "tree_004",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -15.0,
+        -1.5,
+        0.0
+      ],
+      "yaw": 4.922080126853956,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -15.00022,
+        -1.502148
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 6,
+      "name": "tree_005",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -15.0,
+        1.5,
+        0.0
+      ],
+      "yaw": 5.292966194525043,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -14.999515,
+        1.498238
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 7,
+      "name": "tree_006",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -15.0,
+        4.5,
+        0.0
+      ],
+      "yaw": 4.718835265612699,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -15.000649,
+        4.49794
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 8,
+      "name": "tree_007",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -15.0,
+        7.5,
+        0.0
+      ],
+      "yaw": 2.771481600027621,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -15.001418,
+        7.501152
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 9,
+      "name": "tree_008",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -15.0,
+        10.5,
+        0.0
+      ],
+      "yaw": 3.859159311974435,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -15.002425,
+        10.498958
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 10,
+      "name": "tree_009",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -15.0,
+        13.5,
+        0.0
+      ],
+      "yaw": 1.8047834877159739,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -14.999795,
+        13.502631
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 11,
+      "name": "tree_010",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -9.0,
+        -13.5,
+        0.0
+      ],
+      "yaw": 2.8252646372931545,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -9.002135,
+        -13.498449
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 12,
+      "name": "tree_011",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -9.0,
+        -10.5,
+        0.0
+      ],
+      "yaw": 3.0805624114898356,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -9.001702,
+        -10.499334
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 13,
+      "name": "tree_012",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -9.0,
+        -7.5,
+        0.0
+      ],
+      "yaw": 1.3208805025234194,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -8.99885,
+        -7.498172
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 14,
+      "name": "tree_013",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -9.0,
+        -4.5,
+        0.0
+      ],
+      "yaw": 2.184398705885167,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -9.000642,
+        -4.497938
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 15,
+      "name": "tree_014",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -9.0,
+        -1.5,
+        0.0
+      ],
+      "yaw": 5.058818064049495,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -8.999926,
+        -1.502158
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 16,
+      "name": "tree_015",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -9.0,
+        1.5,
+        0.0
+      ],
+      "yaw": 3.2269657269334426,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -9.001781,
+        1.50041
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 17,
+      "name": "tree_016",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -9.0,
+        4.5,
+        0.0
+      ],
+      "yaw": 4.543446535188084,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -9.001221,
+        4.49766
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 18,
+      "name": "tree_017",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -9.0,
+        7.5,
+        0.0
+      ],
+      "yaw": 3.502565023068326,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -9.002636,
+        7.499871
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 19,
+      "name": "tree_018",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -9.0,
+        10.5,
+        0.0
+      ],
+      "yaw": 1.807056260423242,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -8.999837,
+        10.502153
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 20,
+      "name": "tree_019",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -9.0,
+        13.5,
+        0.0
+      ],
+      "yaw": 5.507053648181589,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -8.998775,
+        13.497662
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 21,
+      "name": "tree_020",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -3.0,
+        -13.5,
+        0.0
+      ],
+      "yaw": 4.501370400775281,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -3.000913,
+        -13.501583
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 22,
+      "name": "tree_021",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -3.0,
+        -10.5,
+        0.0
+      ],
+      "yaw": 0.15544161607655538,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -2.997867,
+        -10.500337
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 23,
+      "name": "tree_022",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -3.0,
+        -7.5,
+        0.0
+      ],
+      "yaw": 2.3175189791457154,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -3.00077,
+        -7.498343
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 24,
+      "name": "tree_023",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -3.0,
+        -4.5,
+        0.0
+      ],
+      "yaw": 2.6528707699095677,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -3.001504,
+        -4.49845
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 25,
+      "name": "tree_024",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -3.0,
+        -1.5,
+        0.0
+      ],
+      "yaw": 5.598121630031653,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -2.998828,
+        -1.501814
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 26,
+      "name": "tree_025",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -3.0,
+        1.5,
+        0.0
+      ],
+      "yaw": 3.1318856592677133,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -3.001734,
+        1.500578
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 27,
+      "name": "tree_026",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        -3.0,
+        4.5,
+        0.0
+      ],
+      "yaw": 2.6731392033666395,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        -3.001876,
+        4.501857
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 28,
+      "name": "tree_027",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        -3.0,
+        7.5,
+        0.0
+      ],
+      "yaw": 5.500510628692065,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        -2.999162,
+        7.498376
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 29,
+      "name": "tree_028",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -3.0,
+        10.5,
+        0.0
+      ],
+      "yaw": 5.760139266097974,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -2.998551,
+        10.498399
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 30,
+      "name": "tree_029",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        -3.0,
+        13.5,
+        0.0
+      ],
+      "yaw": 5.3060099320878535,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        -2.9994,
+        13.497926
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 31,
+      "name": "tree_030",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        3.0,
+        -13.5,
+        0.0
+      ],
+      "yaw": 5.8196943314269065,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        3.001305,
+        -13.501279
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 32,
+      "name": "tree_031",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        3.0,
+        -10.5,
+        0.0
+      ],
+      "yaw": 3.2229562490835675,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        2.997898,
+        -10.499507
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 33,
+      "name": "tree_032",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        3.0,
+        -7.5,
+        0.0
+      ],
+      "yaw": 3.616075186236421,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        2.997395,
+        -7.500427
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 34,
+      "name": "tree_033",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        3.0,
+        -4.5,
+        0.0
+      ],
+      "yaw": 5.140476216556309,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        3.000306,
+        -4.502622
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 35,
+      "name": "tree_034",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        3.0,
+        -1.5,
+        0.0
+      ],
+      "yaw": 3.2874665063748143,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        2.998198,
+        -1.499698
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 36,
+      "name": "tree_035",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        3.0,
+        1.5,
+        0.0
+      ],
+      "yaw": 0.644506405891269,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        3.001727,
+        1.500597
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 37,
+      "name": "tree_036",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        3.0,
+        4.5,
+        0.0
+      ],
+      "yaw": 2.698059648343084,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        2.99867,
+        4.501253
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 38,
+      "name": "tree_037",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        3.0,
+        7.5,
+        0.0
+      ],
+      "yaw": 3.0292060382260737,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        2.997595,
+        7.501087
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 39,
+      "name": "tree_038",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        3.0,
+        10.5,
+        0.0
+      ],
+      "yaw": 5.338374991725948,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        3.000815,
+        10.49749
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 40,
+      "name": "tree_039",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        3.0,
+        13.5,
+        0.0
+      ],
+      "yaw": 3.9374869242047765,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        2.997664,
+        13.498772
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 41,
+      "name": "tree_040",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        9.0,
+        -13.5,
+        0.0
+      ],
+      "yaw": 4.236771723927585,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        8.99847,
+        -13.501524
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 42,
+      "name": "tree_041",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        9.0,
+        -10.5,
+        0.0
+      ],
+      "yaw": 5.839998884293157,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        9.001331,
+        -10.501252
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 43,
+      "name": "tree_042",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        9.0,
+        -7.5,
+        0.0
+      ],
+      "yaw": 1.5771202318672077,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        9.00055,
+        -7.498257
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 44,
+      "name": "tree_043",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        9.0,
+        -4.5,
+        0.0
+      ],
+      "yaw": 4.20818806150915,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        8.998427,
+        -4.501479
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 45,
+      "name": "tree_044",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        9.0,
+        -1.5,
+        0.0
+      ],
+      "yaw": 3.444118813098522,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        8.997841,
+        -1.49998
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 46,
+      "name": "tree_045",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        9.0,
+        1.5,
+        0.0
+      ],
+      "yaw": 3.153528272085735,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        8.998254,
+        1.50054
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 47,
+      "name": "tree_046",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        9.0,
+        4.5,
+        0.0
+      ],
+      "yaw": 5.0573000704098305,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        9.000071,
+        4.497842
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 48,
+      "name": "tree_047",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        9.0,
+        7.5,
+        0.0
+      ],
+      "yaw": 2.721039153009213,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        8.998394,
+        7.501444
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 49,
+      "name": "tree_048",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        9.0,
+        10.5,
+        0.0
+      ],
+      "yaw": 5.226617431080539,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        9.000434,
+        10.497885
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 50,
+      "name": "tree_049",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        9.0,
+        13.5,
+        0.0
+      ],
+      "yaw": 0.20803163922433535,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        9.002625,
+        13.499726
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 51,
+      "name": "tree_050",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        15.0,
+        -13.5,
+        0.0
+      ],
+      "yaw": 5.542031385251599,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        15.000904,
+        -13.501588
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 52,
+      "name": "tree_051",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        15.0,
+        -10.5,
+        0.0
+      ],
+      "yaw": 5.048834322109375,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        15.000053,
+        -10.502159
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 53,
+      "name": "tree_052",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        15.0,
+        -7.5,
+        0.0
+      ],
+      "yaw": 2.2615437336027426,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        14.999201,
+        -7.497994
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 54,
+      "name": "tree_053",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        15.0,
+        -4.5,
+        0.0
+      ],
+      "yaw": 1.6343225820279683,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        15.000649,
+        -4.497442
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 55,
+      "name": "tree_054",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        15.0,
+        -1.5,
+        0.0
+      ],
+      "yaw": 2.932086798397401,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        14.998127,
+        -1.498924
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 56,
+      "name": "tree_055",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        15.0,
+        1.5,
+        0.0
+      ],
+      "yaw": 5.076557856115577,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        15.000113,
+        1.497843
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 57,
+      "name": "tree_056",
+      "source_model": "eucalyptus_03",
+      "obj_position": [
+        15.0,
+        4.5,
+        0.0
+      ],
+      "yaw": 4.171391290506963,
+      "mesh_dbh_position": [
+        0.00173908,
+        -0.00056077
+      ],
+      "dbh_world_position": [
+        14.998624,
+        4.498798
+      ],
+      "dbh": 0.28,
+      "height": 26.0
+    },
+    {
+      "tree_id": 58,
+      "name": "tree_057",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        15.0,
+        7.5,
+        0.0
+      ],
+      "yaw": 5.223858626041259,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        15.000523,
+        7.497413
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    },
+    {
+      "tree_id": 59,
+      "name": "tree_058",
+      "source_model": "eucalyptus_02",
+      "obj_position": [
+        15.0,
+        10.5,
+        0.0
+      ],
+      "yaw": 2.875534804895443,
+      "mesh_dbh_position": [
+        0.00205528,
+        -0.00066273
+      ],
+      "dbh_world_position": [
+        14.998191,
+        10.50118
+      ],
+      "dbh": 0.22,
+      "height": 22.0
+    },
+    {
+      "tree_id": 60,
+      "name": "tree_059",
+      "source_model": "eucalyptus_01",
+      "obj_position": [
+        15.0,
+        13.5,
+        0.0
+      ],
+      "yaw": 2.754869144677758,
+      "mesh_dbh_position": [
+        0.00251201,
+        -0.00081
+      ],
+      "dbh_world_position": [
+        14.997979,
+        13.501698
+      ],
+      "dbh": 0.18,
+      "height": 18.0
+    }
+  ],
+  "bushes": [],
+  "misc": [
+    {
+      "object_id": 1,
+      "type": "object",
+      "name": "grass_plane",
+      "source_model": "mrs_gazebo_common_resources/models/grass_plane",
+      "obj_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ]
+}

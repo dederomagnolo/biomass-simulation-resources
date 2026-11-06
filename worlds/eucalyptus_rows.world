@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sdf version="1.9">
+  <world name="eucalyptus_rows">
+    <gravity>0 0 -9.81</gravity>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <scene>
+      <ambient>0.55 0.55 0.55 1</ambient>
+      <background>0.72 0.81 0.88 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <light name="sun" type="directional">
+      <pose>0 0 40 0 0 0</pose>
+      <diffuse>0.95 0.93 0.85 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>-0.4 0.2 -0.8</direction>
+      <cast_shadows>true</cast_shadows>
+    </light>
+    <model name="ground">
+      <static>true</static>
+      <link name="ground">
+        <collision name="ground">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>200 200</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="ground">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>200 200</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.24 0.29 0.12 1</ambient>
+            <diffuse>0.32 0.37 0.18 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_000</name>
+      <pose>-15 -13.5 0 0 0 2.007380306033519</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_001</name>
+      <pose>-15 -10.5 0 0 0 4.066466075498026</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_002</name>
+      <pose>-15 -7.5 0 0 0 5.555088508471962</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_003</name>
+      <pose>-15 -4.5 0 0 0 3.9048997969637655</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_004</name>
+      <pose>-15 -1.5 0 0 0 4.922080126853956</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_005</name>
+      <pose>-15 1.5 0 0 0 5.292966194525043</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_006</name>
+      <pose>-15 4.5 0 0 0 4.718835265612699</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_007</name>
+      <pose>-15 7.5 0 0 0 2.771481600027621</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_008</name>
+      <pose>-15 10.5 0 0 0 3.859159311974435</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_009</name>
+      <pose>-15 13.5 0 0 0 1.8047834877159739</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_010</name>
+      <pose>-9 -13.5 0 0 0 2.8252646372931545</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_011</name>
+      <pose>-9 -10.5 0 0 0 3.0805624114898356</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_012</name>
+      <pose>-9 -7.5 0 0 0 1.3208805025234194</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_013</name>
+      <pose>-9 -4.5 0 0 0 2.184398705885167</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_014</name>
+      <pose>-9 -1.5 0 0 0 5.058818064049495</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_015</name>
+      <pose>-9 1.5 0 0 0 3.2269657269334426</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_016</name>
+      <pose>-9 4.5 0 0 0 4.543446535188084</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_017</name>
+      <pose>-9 7.5 0 0 0 3.502565023068326</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_018</name>
+      <pose>-9 10.5 0 0 0 1.807056260423242</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_019</name>
+      <pose>-9 13.5 0 0 0 5.507053648181589</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_020</name>
+      <pose>-3 -13.5 0 0 0 4.501370400775281</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_021</name>
+      <pose>-3 -10.5 0 0 0 0.15544161607655538</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_022</name>
+      <pose>-3 -7.5 0 0 0 2.3175189791457154</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_023</name>
+      <pose>-3 -4.5 0 0 0 2.6528707699095677</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_024</name>
+      <pose>-3 -1.5 0 0 0 5.598121630031653</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_025</name>
+      <pose>-3 1.5 0 0 0 3.1318856592677133</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_026</name>
+      <pose>-3 4.5 0 0 0 2.6731392033666395</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_027</name>
+      <pose>-3 7.5 0 0 0 5.500510628692065</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_028</name>
+      <pose>-3 10.5 0 0 0 5.760139266097974</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_029</name>
+      <pose>-3 13.5 0 0 0 5.3060099320878535</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_030</name>
+      <pose>3 -13.5 0 0 0 5.8196943314269065</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_031</name>
+      <pose>3 -10.5 0 0 0 3.2229562490835675</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_032</name>
+      <pose>3 -7.5 0 0 0 3.616075186236421</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_033</name>
+      <pose>3 -4.5 0 0 0 5.140476216556309</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_034</name>
+      <pose>3 -1.5 0 0 0 3.2874665063748143</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_035</name>
+      <pose>3 1.5 0 0 0 0.644506405891269</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_036</name>
+      <pose>3 4.5 0 0 0 2.698059648343084</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_037</name>
+      <pose>3 7.5 0 0 0 3.0292060382260737</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_038</name>
+      <pose>3 10.5 0 0 0 5.338374991725948</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_039</name>
+      <pose>3 13.5 0 0 0 3.9374869242047765</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_040</name>
+      <pose>9 -13.5 0 0 0 4.236771723927585</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_041</name>
+      <pose>9 -10.5 0 0 0 5.839998884293157</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_042</name>
+      <pose>9 -7.5 0 0 0 1.5771202318672077</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_043</name>
+      <pose>9 -4.5 0 0 0 4.20818806150915</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_044</name>
+      <pose>9 -1.5 0 0 0 3.444118813098522</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_045</name>
+      <pose>9 1.5 0 0 0 3.153528272085735</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_046</name>
+      <pose>9 4.5 0 0 0 5.0573000704098305</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_047</name>
+      <pose>9 7.5 0 0 0 2.721039153009213</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_048</name>
+      <pose>9 10.5 0 0 0 5.226617431080539</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_049</name>
+      <pose>9 13.5 0 0 0 0.20803163922433535</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_050</name>
+      <pose>15 -13.5 0 0 0 5.542031385251599</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_051</name>
+      <pose>15 -10.5 0 0 0 5.048834322109375</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_052</name>
+      <pose>15 -7.5 0 0 0 2.2615437336027426</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_053</name>
+      <pose>15 -4.5 0 0 0 1.6343225820279683</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_054</name>
+      <pose>15 -1.5 0 0 0 2.932086798397401</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_055</name>
+      <pose>15 1.5 0 0 0 5.076557856115577</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_03</uri>
+      <name>tree_056</name>
+      <pose>15 4.5 0 0 0 4.171391290506963</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_057</name>
+      <pose>15 7.5 0 0 0 5.223858626041259</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_02</uri>
+      <name>tree_058</name>
+      <pose>15 10.5 0 0 0 2.875534804895443</pose>
+    </include>
+    <include>
+      <uri>model://eucalyptus_01</uri>
+      <name>tree_059</name>
+      <pose>15 13.5 0 0 0 2.754869144677758</pose>
+    </include>
+  </world>
+</sdf>
