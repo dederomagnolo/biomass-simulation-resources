@@ -1,0 +1,170 @@
+{
+  "world_name": "default",
+  "limits": {
+    "x_min": -4,
+    "x_max": 14,
+    "y_min": -3,
+    "y_max": 13
+  },
+  "trunks": [
+    {
+      "tree_id": 1,
+      "name": "world_jean_tree_clone",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        4.52183,
+        3.7767,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 2,
+      "name": "world_jean_tree_clone_clone",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        6.97302,
+        1.5287,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 3,
+      "name": "world_jean_tree_clone_clone_clone",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        8.27403,
+        4.78452,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 4,
+      "name": "world_jean_tree_clone_clone_clone_0",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        4.97222,
+        6.81452,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 5,
+      "name": "world_jean_tree_clone_clone_0_clone_1_clone_1",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        11.2258,
+        1.96661,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "tree_id": 6,
+      "name": "world_jean_tree_clone_clone_clone_1",
+      "source_model": "world_jean_tree",
+      "obj_position": [
+        -2.81447,
+        4.67165,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ],
+  "bushes": [
+    {
+      "bush_id": 1,
+      "name": "new_shrub_2",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        1.33734,
+        10.915,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 2,
+      "name": "new_shrub_2_clone",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        2.52987,
+        9.36425,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 3,
+      "name": "new_shrub_2_clone_0",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        3.19204,
+        11.6242,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 4,
+      "name": "new_shrub_2_clone_5",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        4.58723,
+        1.13757,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 5,
+      "name": "new_shrub_2_clone_7",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        11.0189,
+        -1.02783,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 6,
+      "name": "new_shrub_2_clone_8",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        12.7496,
+        -1.97415,
+        0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "bush_id": 7,
+      "name": "new_shrub_2_clone_9",
+      "source_model": "new_shrub_2",
+      "obj_position": [
+        -2.41117,
+        4.12184,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ],
+  "misc": [
+    {
+      "object_id": 1,
+      "type": "object",
+      "name": "ground_plane",
+      "source_model": "ground_plane",
+      "obj_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ]
+}

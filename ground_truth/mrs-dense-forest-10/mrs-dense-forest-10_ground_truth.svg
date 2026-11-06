@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="800" viewBox="0 0 880 800">
   <rect width="880" height="800" fill="#fcfcf8"/>
-  <text x="100" y="36" font-size="24" font-family="Arial" fill="#222">default Ground Truth</text>
+  <text x="100" y="36" font-size="24" font-family="Arial" fill="#222">mrs_dense_forest_10 Ground Truth</text>
   <text x="100" y="58" font-size="14" font-family="Arial" fill="#555">Trees and bushes extracted from the Gazebo world file</text>
   <rect x="100" y="60" width="720" height="640" fill="#f7faf7" stroke="#b9c7b9" stroke-width="1.5"/>
   <line x1="100.00" y1="60" x2="100.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>

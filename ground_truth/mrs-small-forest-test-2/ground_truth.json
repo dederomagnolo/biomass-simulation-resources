@@ -179,12 +179,24 @@
     {
       "object_id": 1,
       "type": "object",
-      "name": "grass_plane",
-      "source_model": "mrs_gazebo_common_resources/models/grass_plane",
+      "name": "ground_plane",
+      "source_model": "ground_plane",
       "obj_position": [
         0.0,
         0.0,
         0.0
+      ],
+      "yaw": 0.0
+    },
+    {
+      "object_id": 2,
+      "type": "object",
+      "name": "uav1",
+      "source_model": "mrs_robots_description",
+      "obj_position": [
+        0.0,
+        0.0,
+        1.0
       ],
       "yaw": 0.0
     }

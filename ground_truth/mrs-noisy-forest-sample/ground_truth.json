@@ -321,8 +321,8 @@
     {
       "object_id": 1,
       "type": "object",
-      "name": "grass_plane",
-      "source_model": "mrs_gazebo_common_resources/models/grass_plane",
+      "name": "ground_plane",
+      "source_model": "ground_plane",
       "obj_position": [
         0.0,
         0.0,

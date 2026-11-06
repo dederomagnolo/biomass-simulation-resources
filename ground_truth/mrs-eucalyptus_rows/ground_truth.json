@@ -1,5 +1,5 @@
 {
-  "world_name": "mrs-eucalyptus_rows",
+  "world_name": "mrs_eucalyptus_rows",
   "limits": {
     "x_min": -16,
     "x_max": 16,
@@ -1273,8 +1273,8 @@
     {
       "object_id": 1,
       "type": "object",
-      "name": "grass_plane",
-      "source_model": "mrs_gazebo_common_resources/models/grass_plane",
+      "name": "ground",
+      "source_model": "ground",
       "obj_position": [
         0.0,
         0.0,

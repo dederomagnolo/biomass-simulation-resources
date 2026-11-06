@@ -92,15 +92,45 @@ def build(spec):
     path=ROOT/'models'/name; (path/'meshes').mkdir(parents=True,exist_ok=True)
     for mesh,fn in [(wood,'wood'),(leaves,'leaves'),(collision,'collision')]: dae(mesh,path/'meshes'/f'{fn}.dae')
     visuals=''.join(f'<visual name="{part}"><geometry><mesh><uri>model://{name}/meshes/{part}.dae</uri></mesh></geometry><cast_shadows>true</cast_shadows></visual>' for part in ['wood','leaves'])
-    (path/'model.sdf').write_text(f'<?xml version="1.0"?><sdf version="1.9"><model name="{name}"><static>true</static><link name="tree">{visuals}<collision name="woody_collision"><geometry><mesh><uri>model://{name}/meshes/collision.dae</uri></mesh></geometry></collision></link></model></sdf>')
-    (path/'model.config').write_text(f'<?xml version="1.0"?><model><name>{name}</name><version>1.0</version><sdf version="1.9">model.sdf</sdf><author><name>Biomass simulation resources</name></author><description>Procedural eucalyptus, {h} m, DBH {dbh} m; metric Z-up.</description></model>')
+    (path/'model.sdf').write_text(f'<?xml version="1.0"?><sdf version="1.6"><model name="{name}"><static>true</static><link name="tree">{visuals}<collision name="woody_collision"><geometry><mesh><uri>model://{name}/meshes/collision.dae</uri></mesh></geometry></collision></link></model></sdf>')
+    (path/'model.config').write_text(f'<?xml version="1.0"?><model><name>{name}</name><version>1.0</version><sdf version="1.6">model.sdf</sdf><author><name>Biomass simulation resources</name></author><description>Procedural eucalyptus, {h} m, DBH {dbh} m; metric Z-up.</description></model>')
     meta=dict(name=name,height_m=h,dbh_m=dbh,crown_start_m=base,seed=seed,visual_triangles=len(wood.f)+len(leaves.f),collision_triangles=len(collision.f),bounds_min=[min(p[i] for p in wood.v+leaves.v) for i in range(3)],bounds_max=[max(p[i] for p in wood.v+leaves.v) for i in range(3)])
     (path/'dimensions.json').write_text(json.dumps(meta,indent=2)); print(json.dumps(meta),flush=True)
     return wood,leaves
-def world(name,instances):
+def world(name, instances, mrs=False):
+    """Write a Gazebo Classic world while preserving the deterministic tree poses."""
     (ROOT/'worlds').mkdir(exist_ok=True)
-    includes=''.join(f'<include><uri>model://{model}</uri><name>tree_{i:03}</name><pose>{x} {y} 0 0 0 {yaw}</pose></include>' for i,(model,x,y,yaw) in enumerate(instances))
-    (ROOT/'worlds'/f'{name}.world').write_text(pretty_xml(f'''<?xml version="1.0"?><sdf version="1.9"><world name="{name}"><gravity>0 0 -9.81</gravity><plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/><plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/><plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/><plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors"><render_engine>ogre2</render_engine></plugin><scene><ambient>0.55 0.55 0.55 1</ambient><background>0.72 0.81 0.88 1</background><shadows>true</shadows></scene><light name="sun" type="directional"><pose>0 0 40 0 0 0</pose><diffuse>0.95 0.93 0.85 1</diffuse><specular>0.1 0.1 0.1 1</specular><direction>-0.4 0.2 -0.8</direction><cast_shadows>true</cast_shadows></light><model name="ground"><static>true</static><link name="ground"><collision name="ground"><geometry><plane><normal>0 0 1</normal><size>200 200</size></plane></geometry></collision><visual name="ground"><geometry><plane><normal>0 0 1</normal><size>200 200</size></plane></geometry><material><ambient>0.24 0.29 0.12 1</ambient><diffuse>0.32 0.37 0.18 1</diffuse></material></visual></link></model>{includes}</world></sdf>'''))
+    includes = ''.join(
+        f'<include><uri>model://{model}</uri><name>tree_{i:03}</name>'
+        f'<pose>{x} {y} 0 0 0 {yaw}</pose></include>'
+        for i, (model, x, y, yaw) in enumerate(instances)
+    )
+    plugin = ('<plugin name="mrs_gazebo_static_transform_republisher_plugin" '
+              'filename="libMrsGazeboCommonResources_StaticTransformRepublisher.so"/>') if mrs else ''
+    spherical = ('<spherical_coordinates><surface_model>EARTH_WGS84</surface_model>'
+                 '<latitude_deg>47.397743</latitude_deg><longitude_deg>8.545594</longitude_deg>'
+                 '<elevation>0.0</elevation><heading_deg>0</heading_deg>'
+                 '</spherical_coordinates>') if mrs else ''
+    physics = ('<physics name="default_physics" type="ode"><max_step_size>0.005</max_step_size>'
+               '<real_time_update_rate>200</real_time_update_rate></physics>') if mrs else ''
+    ground = ('<model name="ground"><static>true</static><link name="ground">'
+              '<collision name="ground"><geometry><plane><normal>0 0 1</normal>'
+              '<size>200 200</size></plane></geometry></collision>'
+              '<visual name="ground"><geometry><plane><normal>0 0 1</normal>'
+              '<size>200 200</size></plane></geometry><material>'
+              '<ambient>0.24 0.29 0.12 1</ambient><diffuse>0.32 0.37 0.18 1</diffuse>'
+              '</material></visual></link></model>')
+    world_name = name.replace('-', '_') if mrs else name
+    xml = (f'<?xml version="1.0"?><sdf version="1.6"><world name="{world_name}">'
+           f'{plugin}{spherical}<gravity>0 0 -9.81</gravity>{physics}'
+           '<scene><ambient>0.55 0.55 0.55 1</ambient>'
+           '<background>0.72 0.81 0.88 1</background><shadows>true</shadows></scene>'
+           '<light name="sun" type="directional"><pose>0 0 40 0 0 0</pose>'
+           '<diffuse>0.95 0.93 0.85 1</diffuse><specular>0.1 0.1 0.1 1</specular>'
+           '<direction>-0.4 0.2 -0.8</direction><cast_shadows>true</cast_shadows></light>'
+           f'{ground}{includes}</world></sdf>')
+    (ROOT/'worlds'/f'{name}.world').write_text(pretty_xml(xml), encoding='utf-8')
+
 def preview(trees):
     import bpy
     from mathutils import Vector
@@ -124,14 +154,15 @@ def preview(trees):
     (ROOT/'docs').mkdir(exist_ok=True); s.render.filepath=str(ROOT/'docs'/'eucalyptus_preview.png'); bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'docs'/'eucalyptus_preview.blend')); bpy.ops.render.render(write_still=True)
 if __name__=='__main__':
     trees=[build(s) for s in SPECS]
-    world('eucalyptus_showcase',[(s[0],i*10-10,0,0) for i,s in enumerate(SPECS)])
     rng=random.Random(2026); rows=[(SPECS[rng.randrange(3)][0],r*6-15,c*3-13.5,rng.uniform(0,math.tau)) for r in range(6) for c in range(10)]
-    world('eucalyptus_rows',rows)
-    from generate_ground_truth_json import generate, load_catalog
+    world('eucalyptus_rows', rows)
+    world('mrs-eucalyptus_rows', rows, mrs=True)
+    from generate_ground_truth_json import generate, load_catalog, svg_for
     catalog = load_catalog(ROOT/'models'/'models.json')
-    for world_name in ('eucalyptus_showcase', 'eucalyptus_rows'):
+    for world_name in ('eucalyptus_rows', 'mrs-eucalyptus_rows'):
         payload = generate(ROOT/'worlds'/f'{world_name}.world', catalog)
-        destination = ROOT/'ground_truth'/world_name/'ground_truth.json'
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        destination.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        destination = ROOT/'ground_truth'/world_name
+        destination.mkdir(parents=True, exist_ok=True)
+        (destination/'ground_truth.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        (destination/f'{world_name}_ground_truth.svg').write_text(svg_for(payload), encoding='utf-8')
     if '--preview' in sys.argv: preview(trees)

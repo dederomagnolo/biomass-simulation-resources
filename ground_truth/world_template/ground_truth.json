@@ -1,0 +1,25 @@
+{
+  "world_name": "world_template_empty",
+  "limits": {
+    "x_min": -1,
+    "x_max": 1,
+    "y_min": -1,
+    "y_max": 1
+  },
+  "trunks": [],
+  "bushes": [],
+  "misc": [
+    {
+      "object_id": 1,
+      "type": "object",
+      "name": "green_ground",
+      "source_model": "green_ground",
+      "obj_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ]
+}

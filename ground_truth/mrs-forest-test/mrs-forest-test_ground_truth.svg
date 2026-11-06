@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="800" viewBox="0 0 880 800">
+  <rect width="880" height="800" fill="#fcfcf8"/>
+  <text x="100" y="36" font-size="24" font-family="Arial" fill="#222">default Ground Truth</text>
+  <text x="100" y="58" font-size="14" font-family="Arial" fill="#555">Trees and bushes extracted from the Gazebo world file</text>
+  <rect x="100" y="60" width="720" height="640" fill="#f7faf7" stroke="#b9c7b9" stroke-width="1.5"/>
+  <line x1="260.00" y1="60" x2="260.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="260.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">0</text>
+  <line x1="460.00" y1="60" x2="460.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="460.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">5</text>
+  <line x1="660.00" y1="60" x2="660.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="660.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">10</text>
+  <line x1="100" y1="660.00" x2="820" y2="660.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="664.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-2</text>
+  <line x1="100" y1="580.00" x2="820" y2="580.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="584.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">0</text>
+  <line x1="100" y1="500.00" x2="820" y2="500.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="504.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">2</text>
+  <line x1="100" y1="420.00" x2="820" y2="420.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="424.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">4</text>
+  <line x1="100" y1="340.00" x2="820" y2="340.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="344.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">6</text>
+  <line x1="100" y1="260.00" x2="820" y2="260.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="264.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">8</text>
+  <line x1="100" y1="180.00" x2="820" y2="180.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="184.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">10</text>
+  <line x1="100" y1="100.00" x2="820" y2="100.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="104.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">12</text>
+  <line x1="260.00" y1="60" x2="260.00" y2="700" stroke="#8f9d8f" stroke-width="2"/>
+  <line x1="100" y1="580.00" x2="820" y2="580.00" stroke="#8f9d8f" stroke-width="2"/>
+  <text x="460" y="770" font-size="16" font-family="Arial" fill="#333" text-anchor="middle">X (m)</text>
+  <text x="28" y="380" font-size="16" font-family="Arial" fill="#333" text-anchor="middle" transform="rotate(-90 28 380)">Y (m)</text>
+  <circle cx="440.87" cy="428.93" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_clone | tree 1 | (4.52183, 3.7767) m</title></circle>
+  <circle cx="538.92" cy="518.85" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_clone_clone | tree 2 | (6.97302, 1.5287) m</title></circle>
+  <circle cx="590.96" cy="388.62" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_clone_clone_clone | tree 3 | (8.27403, 4.78452) m</title></circle>
+  <circle cx="458.89" cy="307.42" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_clone_clone_clone_0 | tree 4 | (4.97222, 6.81452) m</title></circle>
+  <circle cx="709.03" cy="501.34" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_clone_clone_0_clone_1_clone_1 | tree 5 | (11.2258, 1.96661) m</title></circle>
+  <circle cx="147.42" cy="393.13" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>world_jean_tree_clone_clone_clone_1 | tree 6 | (-2.81447, 4.67165) m</title></circle>
+  <rect x="307.49" y="137.40" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"><title>new_shrub_2 | bush 1 | (1.33734, 10.915) m</title></rect>
+  <rect x="355.19" y="199.43" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"><title>new_shrub_2_clone | bush 2 | (2.52987, 9.36425) m</title></rect>
+  <rect x="381.68" y="109.03" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"><title>new_shrub_2_clone_0 | bush 3 | (3.19204, 11.6242) m</title></rect>
+  <rect x="437.49" y="528.50" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"><title>new_shrub_2_clone_5 | bush 4 | (4.58723, 1.13757) m</title></rect>
+  <rect x="694.76" y="615.11" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"><title>new_shrub_2_clone_7 | bush 5 | (11.0189, -1.02783) m</title></rect>
+  <rect x="763.98" y="652.97" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"><title>new_shrub_2_clone_8 | bush 6 | (12.7496, -1.97415) m</title></rect>
+  <rect x="157.55" y="409.13" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"><title>new_shrub_2_clone_9 | bush 7 | (-2.41117, 4.12184) m</title></rect>
+  <rect x="620" y="84" width="180" height="78" rx="8" fill="#ffffff" stroke="#cfd7cf"/>
+  <circle cx="642" cy="108" r="7" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"/>
+  <text x="658" y="113" font-size="14" font-family="Arial" fill="#333">Tree</text>
+  <rect x="635" y="127" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"/>
+  <text x="658" y="138" font-size="14" font-family="Arial" fill="#333">Bush</text>
+  <text x="635" y="154" font-size="12" font-family="Arial" fill="#666">6 trees, 7 bushes</text>
+</svg>

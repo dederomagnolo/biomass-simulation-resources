@@ -1,0 +1,25 @@
+{
+  "world_name": "default",
+  "limits": {
+    "x_min": -1,
+    "x_max": 1,
+    "y_min": -1,
+    "y_max": 1
+  },
+  "trunks": [],
+  "bushes": [],
+  "misc": [
+    {
+      "object_id": 1,
+      "type": "object",
+      "name": "ground_plane",
+      "source_model": "ground_plane",
+      "obj_position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yaw": 0.0
+    }
+  ]
+}
