@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="800" viewBox="0 0 880 800">
+  <rect width="880" height="800" fill="#fcfcf8"/>
+  <text x="100" y="36" font-size="24" font-family="Arial" fill="#222">mrs-eucalyptus_rows Ground Truth</text>
+  <text x="100" y="58" font-size="14" font-family="Arial" fill="#555">Trees and bushes extracted from the Gazebo world file</text>
+  <rect x="100" y="60" width="720" height="640" fill="#f7faf7" stroke="#b9c7b9" stroke-width="1.5"/>
+  <line x1="122.50" y1="60" x2="122.50" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="122.50" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-15</text>
+  <line x1="235.00" y1="60" x2="235.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="235.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-10</text>
+  <line x1="347.50" y1="60" x2="347.50" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="347.50" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">-5</text>
+  <line x1="460.00" y1="60" x2="460.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="460.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">0</text>
+  <line x1="572.50" y1="60" x2="572.50" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="572.50" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">5</text>
+  <line x1="685.00" y1="60" x2="685.00" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="685.00" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">10</text>
+  <line x1="797.50" y1="60" x2="797.50" y2="700" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="797.50" y="728" font-size="12" font-family="Arial" fill="#444" text-anchor="middle">15</text>
+  <line x1="100" y1="700.00" x2="820" y2="700.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="704.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-15</text>
+  <line x1="100" y1="593.33" x2="820" y2="593.33" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="597.33" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-10</text>
+  <line x1="100" y1="486.67" x2="820" y2="486.67" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="490.67" font-size="12" font-family="Arial" fill="#444" text-anchor="end">-5</text>
+  <line x1="100" y1="380.00" x2="820" y2="380.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="384.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">0</text>
+  <line x1="100" y1="273.33" x2="820" y2="273.33" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="277.33" font-size="12" font-family="Arial" fill="#444" text-anchor="end">5</text>
+  <line x1="100" y1="166.67" x2="820" y2="166.67" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="170.67" font-size="12" font-family="Arial" fill="#444" text-anchor="end">10</text>
+  <line x1="100" y1="60.00" x2="820" y2="60.00" stroke="#d9dfd9" stroke-width="1"/>
+  <text x="82" y="64.00" font-size="12" font-family="Arial" fill="#444" text-anchor="end">15</text>
+  <line x1="460.00" y1="60" x2="460.00" y2="700" stroke="#8f9d8f" stroke-width="2"/>
+  <line x1="100" y1="380.00" x2="820" y2="380.00" stroke="#8f9d8f" stroke-width="2"/>
+  <text x="460" y="770" font-size="16" font-family="Arial" fill="#333" text-anchor="middle">X (m)</text>
+  <text x="28" y="380" font-size="16" font-family="Arial" fill="#333" text-anchor="middle" transform="rotate(-90 28 380)">Y (m)</text>
+  <circle cx="122.49" cy="667.94" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_000 | tree 1 | (-15.0003, -13.4974) m</title></circle>
+  <circle cx="122.47" cy="604.02" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_001 | tree 2 | (-15.0015, -10.5011) m</title></circle>
+  <circle cx="122.53" cy="540.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_002 | tree 3 | (-14.9987, -7.50228) m</title></circle>
+  <circle cx="122.46" cy="476.02" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_003 | tree 4 | (-15.0016, -4.5008) m</title></circle>
+  <circle cx="122.50" cy="412.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_004 | tree 5 | (-15.0002, -1.50215) m</title></circle>
+  <circle cx="122.51" cy="348.04" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_005 | tree 6 | (-14.9995, 1.49824) m</title></circle>
+  <circle cx="122.49" cy="284.04" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_006 | tree 7 | (-15.0006, 4.49794) m</title></circle>
+  <circle cx="122.47" cy="219.98" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_007 | tree 8 | (-15.0014, 7.50115) m</title></circle>
+  <circle cx="122.45" cy="156.02" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_008 | tree 9 | (-15.0024, 10.499) m</title></circle>
+  <circle cx="122.50" cy="91.94" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_009 | tree 10 | (-14.9998, 13.5026) m</title></circle>
+  <circle cx="257.45" cy="667.97" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_010 | tree 11 | (-9.00214, -13.4984) m</title></circle>
+  <circle cx="257.46" cy="603.99" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_011 | tree 12 | (-9.0017, -10.4993) m</title></circle>
+  <circle cx="257.53" cy="539.96" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_012 | tree 13 | (-8.99885, -7.49817) m</title></circle>
+  <circle cx="257.49" cy="475.96" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_013 | tree 14 | (-9.00064, -4.49794) m</title></circle>
+  <circle cx="257.50" cy="412.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_014 | tree 15 | (-8.99993, -1.50216) m</title></circle>
+  <circle cx="257.46" cy="347.99" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_015 | tree 16 | (-9.00178, 1.50041) m</title></circle>
+  <circle cx="257.47" cy="284.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_016 | tree 17 | (-9.00122, 4.49766) m</title></circle>
+  <circle cx="257.44" cy="220.00" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_017 | tree 18 | (-9.00264, 7.49987) m</title></circle>
+  <circle cx="257.50" cy="155.95" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_018 | tree 19 | (-8.99984, 10.5022) m</title></circle>
+  <circle cx="257.53" cy="92.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_019 | tree 20 | (-8.99878, 13.4977) m</title></circle>
+  <circle cx="392.48" cy="668.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_020 | tree 21 | (-3.00091, -13.5016) m</title></circle>
+  <circle cx="392.55" cy="604.01" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_021 | tree 22 | (-2.99787, -10.5003) m</title></circle>
+  <circle cx="392.48" cy="539.96" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_022 | tree 23 | (-3.00077, -7.49834) m</title></circle>
+  <circle cx="392.47" cy="475.97" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_023 | tree 24 | (-3.0015, -4.49845) m</title></circle>
+  <circle cx="392.53" cy="412.04" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_024 | tree 25 | (-2.99883, -1.50181) m</title></circle>
+  <circle cx="392.46" cy="347.99" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_025 | tree 26 | (-3.00173, 1.50058) m</title></circle>
+  <circle cx="392.46" cy="283.96" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_026 | tree 27 | (-3.00188, 4.50186) m</title></circle>
+  <circle cx="392.52" cy="220.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_027 | tree 28 | (-2.99916, 7.49838) m</title></circle>
+  <circle cx="392.53" cy="156.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_028 | tree 29 | (-2.99855, 10.4984) m</title></circle>
+  <circle cx="392.51" cy="92.04" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_029 | tree 30 | (-2.9994, 13.4979) m</title></circle>
+  <circle cx="527.53" cy="668.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_030 | tree 31 | (3.0013, -13.5013) m</title></circle>
+  <circle cx="527.45" cy="603.99" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_031 | tree 32 | (2.9979, -10.4995) m</title></circle>
+  <circle cx="527.44" cy="540.01" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_032 | tree 33 | (2.9974, -7.50043) m</title></circle>
+  <circle cx="527.51" cy="476.06" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_033 | tree 34 | (3.00031, -4.50262) m</title></circle>
+  <circle cx="527.46" cy="411.99" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_034 | tree 35 | (2.9982, -1.4997) m</title></circle>
+  <circle cx="527.54" cy="347.99" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_035 | tree 36 | (3.00173, 1.5006) m</title></circle>
+  <circle cx="527.47" cy="283.97" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_036 | tree 37 | (2.99867, 4.50125) m</title></circle>
+  <circle cx="527.45" cy="219.98" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_037 | tree 38 | (2.9976, 7.50109) m</title></circle>
+  <circle cx="527.52" cy="156.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_038 | tree 39 | (3.00081, 10.4975) m</title></circle>
+  <circle cx="527.45" cy="92.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_039 | tree 40 | (2.99766, 13.4988) m</title></circle>
+  <circle cx="662.47" cy="668.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_040 | tree 41 | (8.99847, -13.5015) m</title></circle>
+  <circle cx="662.53" cy="604.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_041 | tree 42 | (9.00133, -10.5013) m</title></circle>
+  <circle cx="662.51" cy="539.96" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_042 | tree 43 | (9.00055, -7.49826) m</title></circle>
+  <circle cx="662.46" cy="476.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_043 | tree 44 | (8.99843, -4.50148) m</title></circle>
+  <circle cx="662.45" cy="412.00" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_044 | tree 45 | (8.99784, -1.49998) m</title></circle>
+  <circle cx="662.46" cy="347.99" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_045 | tree 46 | (8.99825, 1.50054) m</title></circle>
+  <circle cx="662.50" cy="284.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_046 | tree 47 | (9.00007, 4.49784) m</title></circle>
+  <circle cx="662.46" cy="219.97" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_047 | tree 48 | (8.99839, 7.50144) m</title></circle>
+  <circle cx="662.51" cy="156.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_048 | tree 49 | (9.00043, 10.4979) m</title></circle>
+  <circle cx="662.56" cy="92.01" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_049 | tree 50 | (9.00263, 13.4997) m</title></circle>
+  <circle cx="797.52" cy="668.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_050 | tree 51 | (15.0009, -13.5016) m</title></circle>
+  <circle cx="797.50" cy="604.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_051 | tree 52 | (15.0001, -10.5022) m</title></circle>
+  <circle cx="797.48" cy="539.96" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_052 | tree 53 | (14.9992, -7.49799) m</title></circle>
+  <circle cx="797.51" cy="475.95" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_053 | tree 54 | (15.0006, -4.49744) m</title></circle>
+  <circle cx="797.46" cy="411.98" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_054 | tree 55 | (14.9981, -1.49892) m</title></circle>
+  <circle cx="797.50" cy="348.05" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_055 | tree 56 | (15.0001, 1.49784) m</title></circle>
+  <circle cx="797.47" cy="284.03" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_056 | tree 57 | (14.9986, 4.4988) m</title></circle>
+  <circle cx="797.51" cy="220.06" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_057 | tree 58 | (15.0005, 7.49741) m</title></circle>
+  <circle cx="797.46" cy="155.97" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_058 | tree 59 | (14.9982, 10.5012) m</title></circle>
+  <circle cx="797.45" cy="91.96" r="8" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"><title>tree_059 | tree 60 | (14.998, 13.5017) m</title></circle>
+  <rect x="620" y="84" width="180" height="78" rx="8" fill="#ffffff" stroke="#cfd7cf"/>
+  <circle cx="642" cy="108" r="7" fill="#2f7d32" stroke="#184d1d" stroke-width="1.5"/>
+  <text x="658" y="113" font-size="14" font-family="Arial" fill="#333">Tree</text>
+  <rect x="635" y="127" width="12" height="12" fill="#c96b1f" stroke="#7a3f10" stroke-width="1.5"/>
+  <text x="658" y="138" font-size="14" font-family="Arial" fill="#333">Bush</text>
+  <text x="635" y="154" font-size="12" font-family="Arial" fill="#666">60 trees, 0 bushes</text>
+</svg>
